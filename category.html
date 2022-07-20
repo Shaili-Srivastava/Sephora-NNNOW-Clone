@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Category</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+</head>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #main {
+        width: 80%;
+        margin: auto;
+        border: 1px solid red;
+    }
+
+    #main>img {
+        width: 100%;
+        border: 1px solid violet;
+    }
+
+    #content {
+        display: flex;
+        border: 1px solid red;
+    }
+
+    #sidebar {
+        width: 25%;
+        border: 2px solid black;
+        margin: 5px;
+    }
+
+    #productsList {
+        width: 75%;
+        border: 2px solid black;
+        margin: 5px;
+    }
+
+    .category_list {
+        border: 2px solid red;
+        margin: 5px;
+    }
+
+    .list_heading {
+        border: 1px solid blue;
+        background-color: #f3f3f3;
+        margin: 2px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 10px 30px;
+        align-items: center;
+    }
+
+    .heading_name {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    .heading_desc {
+        font-size: 22px;
+    }
+
+    #list_container_1 {
+        min-width: 40%;
+        display: inline-flex;
+        /* overflow-x: scroll; */
+        /* background-color: violet; */
+        gap: 5px;
+    }
+
+    #list_container_2 {
+        display: flex;
+        gap: 5px;
+    }
+
+    #list_container_3 {
+        display: flex;
+        gap: 5px;
+    }
+
+    #list_container_4 {
+        display: flex;
+        gap: 5px;
+    }
+
+    .card {
+        width: 200px;
+        /* background-color: yellow; */
+        padding: 10px;
+        text-align: center;
+        position: relative;
+        border: 1px solid black;
+    }
+
+    .card>img {
+        width: 80%;
+        border: 1px solid red;
+    }
+
+    /* ----------------------------------------------- */
+    #sidebar ul ul li {
+        width: 400px;
+        float: none;
+        display: list-item;
+        position: relative;
+    }
+
+    /* Hide Dropdowns by Default */
+    #sidebar ul li ul {
+        display: none;
+        position: relative;
+        left: 10px;
+        /* the height of the main nav */
+    }
+
+    #sidebar {
+        /* border: 1px solid black; */
+        width: 30%;
+    }
+
+    #sidebar ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+    }
+
+    b {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    #sidebar ul li {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid black; */
+    }
+
+    #sidebar li,
+    option,
+    a {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    #sidebar1 a:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+    }
+
+    .hiddenDiv {
+        background-color: green;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+        padding: 20px 10px;
+        position: absolute;
+        bottom: 220px;
+        display: none;
+        transition: 1.0 ease;
+    }
+
+    .card:hover .hiddenDiv {
+        display: flex;
+
+    }
+
+    .hiddenDiv p {
+        line-height: 10px;
+        color: white;
+    }
+
+    .hiddenDiv img {
+        width: 20%;
+        padding: 0px;
+
+    }
+</style>
+
+<body>
+    <div id="main">
+
+    </div>
+    <div id="sidebar1">
+        <ul>
+            <li class="sidebar_cat">FACE
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Foundation</a></option>
+                    <option><a href="#">BB & CC Cream</a></option>
+                    <option><a href="#">Concealer</a></option>
+                </ul>
+            </li>
+            <li class="sidebar_cat">CHEEK
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Brush</a></option>
+                    <option><a href="#">Bronzer</a></option>
+                    <option><a href="#">Highlighter</a></option>
+                </ul>
+            </li>
+            <li class="sidebar_cat">EYE
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Mascara</a></option>
+                    <option><a href="#">Eyeliner</a></option>
+                    <option><a href="#">Eyeslashes</a></option>
+                </ul>
+            <li class="sidebar_cat">LIP
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Lip Stick</a></option>
+                    <option><a href="#">Lip Gloss</a></option>
+                    <option><a href="#">Lip Plumper</a></option>
+                </ul>
+            </li>
+
+            <li class="sidebar_cat">BRUSHES & APPLICATORS
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Face Brushes</a></option>
+                    <option><a href="#">Lip Brushes</a></option>
+                    <option><a href="#">Eye Brushes</a></option>
+                </ul>
+            </li>
+            <li class="sidebar_cat">ACCESSORIES
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Nail Tools</a></option>
+                    <option><a href="#">make Up Tools & Accessories</a></option>
+                </ul>
+            </li>
+            <li class="sidebar_cat">NAIL
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Nail Polish</a></option>
+                    <option><a href="#">Nail Care</a></option>
+                </ul>
+            </li>
+            <li><a href="#">MAKEUP PALETTES
+                    <ul class="sidebar_cat_content">
+                        <option><a href="#">Makeup Platters</a></option>
+                    </ul>
+            </li>
+            <li class="sidebar_cat">VEGAN</a>
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Eye</a></option>
+                    <option><a href="#">Face</a></option>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div id="demo">
+    </div>
+    <b>|</b>
+</body>
+
+</html>
+<script src="./Scripts/category.js" type="module"></script>
