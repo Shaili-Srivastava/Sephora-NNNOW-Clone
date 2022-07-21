@@ -1,5 +1,6 @@
 let navbar= ()=>{
-    return ` <div id="navtop">
+    return ` <div id="navtop1">
+    <div id="navtop">
     <div>
         <div><a href="https://www.nnnow.com/"><img src="https://cdn02.nnnow.com/web-images/master/navtree_metaData/59b2425ae4b0d70964ee66e0/1505806763887/12NNNOWLOGODESKTOP.png" alt="Logo Error"></a></div>
         <div class="gap">|</div>
@@ -8,43 +9,19 @@ let navbar= ()=>{
             
         </div>  
     </div>
-    <div>
-        <div>
-        <svg width="400" height="400">
-            <polygon points="40,40 10,55 50,55 10,45 30,60" style="fill: #704280;"></polygon>
-        </svg>
-        </div>
-        <div>
-            <svg width="400" height="400">
-                <polygon points="40,40 10,55 50,55 10,45 30,60" style="fill: #ffc001"></polygon>
-            </svg>
-            </div>
-            <div>
-                <svg width="400" height="400">
-                    <polygon points="40,40 10,55 50,55 10,45 30,60" style="fill: #ec008c;"></polygon>
-                </svg>
-                </div>
+    <div class="starlogo">
+    <img src="https://i.ibb.co/XXkNpPL/star-Purple.png" alt="">
+    <img src="https://i.ibb.co/z6qBmVS/star.png" alt="">
+    <img src="https://i.ibb.co/jz9MgZN/star-Pink.png" alt="">
     </div>
     <div>
         <p>Get 10% OFF on your first purchase. Use Code:</p>
         <p>BEAUTY10</p>
     </div>
-    <div>
-        <div>
-        <svg width="400" height="400">
-            <polygon points="40,40 10,55 50,55 10,45 30,60" style="fill: #ec008c;"></polygon>
-        </svg>
-        </div>
-        <div>
-            <svg width="400" height="400">
-                <polygon points="40,40 10,55 50,55 10,45 30,60" style="fill: #ffc001"></polygon>
-            </svg>
-            </div>
-            <div>
-                <svg width="400" height="400">
-                    <polygon points="40,40 10,55 50,55 10,45 30,60" style="fill: #704280;"></polygon>
-                </svg>
-                </div>
+    <div class="starlogo">
+    <img src="https://i.ibb.co/jz9MgZN/star-Pink.png" alt="">
+    <img src="https://i.ibb.co/z6qBmVS/star.png" alt="">
+    <img src="https://i.ibb.co/XXkNpPL/star-Purple.png" alt="">
     </div>
     <div >
     <div class="firstnav">
@@ -64,12 +41,13 @@ let navbar= ()=>{
         </div>
     </div>
     </div>
+    </div>
 </div>
 <div id="midnav">
     <div>
         <img src="https://2.bp.blogspot.com/-QLIEG23imMI/XkV80ER9UAI/AAAAAAAACPI/Qx6esAa5KI02zsrjUvBERVbsNIKrNR2NQCLcBGAsYHQ/s1600/Search%2Bicon.png" alt="search">
         <input type="text" id="searchquery" placeholder="Search SEPHORA"></div>
-    <div><a href="index.html"><img src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png" alt="Sephora"></a></div>
+    <div id="homelogo"><a href="index.html"><img src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png" alt="Sephora"></a></div>
     <div>
         <div><a href="wishlist.html"><img src="https://i.ibb.co/Hqh4zqT/heart.png" alt="wishlist"></a></div>
         <div class="gap">|</div>
