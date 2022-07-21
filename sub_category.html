@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main_div{
+            border: 2px solid black;
+            height: auto;
+            width: 80%;
+            margin: auto;
+            display: flex;
+        }
+        #select_div{
+            display: flex;
+            height: 30px;
+            width: 100%;
+            justify-content:right;
+            align-items: center;  
+        }
+        #select{
+            padding: 5px; 
+            margin: 5px;
+            width: 30%;     
+            border: 2px solid black;   
+            
+        }
+        #left_div{
+            height: auto;
+            width: 15%;
+        }
+        #right_div{
+            height: auto;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #product_div{
+            height: 300px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        #detailed_pro{
+            height: auto;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main_div">  
+            <div id="left_div">
+               <div id="category">
+                <h3>CATEGORY</h3>
+                <input type="checkbox" name="" id="c1" value="Moisturizer" onclick="filter()">
+                <label for="moisturizer">Moisturizer</label>
+                <br>
+                <input type="checkbox" name="" id="c2" value="Night Cream" onclick="filter()">
+                <label for="moisturizer">Moisturizer</label>
+                <br>
+                <input type="checkbox" name="" id="c3" value="Face Mist">
+               <label for="moisturizer">Moisturizer</label>
+               <br>
+               <input type="checkbox" name="" id="c4" value="BB Cream and CC Cream">
+               <label for="moisturizer">Moisturizer</label>
+               <br>
+               <hr>
+               <div id="filter">
+
+               </div>
+               </div>
+
+            </div>
+            <div id="right_div">
+                <div id="select_div">
+                    <select name="" id="select">
+                        <option value="">Popularity</option>
+                        <option value="">High to Low</option>
+                        <option value="">Low to High</option>
+                    </select>
+                </div>
+                <div id="product_div">
+                </div>
+            </div>
+    </div>
+</body>
+</html>
+
+<script>
+    
+    let arr = [{
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },
+    {
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },
+    {
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },
+    {
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },
+    {
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },
+    {
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },
+    {
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },
+    {
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },
+    {
+        img :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+        brand:"FOREST ESSENTIAL",
+        desc: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+        price: `Rs ${3755}`
+    },]
+    
+    function append_data(){
+        arr.forEach((el) => {
+            let div = document.createElement("div")
+            div.setAttribute ("id", "detailed_pro")
+            let img = document.createElement("img");
+            img.src= el.img
+            let brand = document.createElement("h4");
+            brand.innerText= el.brand
+            let desc = document.createElement("p")
+            desc.innerText= el.desc
+            let price = document.createElement("h4")
+            price.innerText= el.price
+
+           div.append(img,brand,desc,price)
+           document.getElementById("product_div")
+           product_div.append(div)
+
+        });
+    }
+    append_data(arr)
+</script>
