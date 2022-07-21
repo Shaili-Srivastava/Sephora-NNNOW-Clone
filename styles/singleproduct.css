@@ -1,0 +1,48 @@
+ .card {
+     width: 100px;
+     margin: auto;
+     /* background-color: yellow; */
+     padding: 10px;
+     text-align: center;
+     position: relative;
+     border: 1px solid black;
+ }
+
+ .card>img {
+     width: 90%;
+     border: 1px solid red;
+ }
+
+ .hiddenDiv {
+     margin: auto;
+     background-color: green;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1;
+     padding: 20px 10px;
+     position: absolute;
+     visibility: hidden;
+     bottom: 220px;
+     right: 0px;
+     width: 100%;
+     height: 0px;
+     transition: .5s ease;
+ }
+
+ .card:hover .hiddenDiv {
+     height: 60px;
+     visibility: visible;
+     transition: .5s ease;
+
+ }
+
+ .hiddenDiv p {
+     line-height: 10px;
+     color: white;
+ }
+
+ .hiddenDiv img {
+     width: 20%;
+     padding: 0px;
+ }

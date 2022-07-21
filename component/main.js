@@ -10,7 +10,11 @@ let displyFrameWork = () => {
                         <div class="heading_desc">Description</div>
                     </div>
                     <h3 style="text-align:right;"><a href="">VIEW ALL</a></h3>
-                    <div id="list_container_1">
+                    <div id="slider">
+                        <img class="leftarrow" src="https://th.bing.com/th/id/R.3e687549bc2d0a48a973cbca08447ec4?rik=YGXkIKdpQ%2bwM%2fg&riu=http%3a%2f%2fstevekeane.com%2fimages%2fback.png&ehk=XG6aivNt56vGFX4VwDllcuL7cmnigmzVhg6Dy0bDGHo%3d&risl=&pid=ImgRaw&r=0" alt="">
+                        <img class="rightarrow" src="https://stevekeane.com/images/forward.png" alt="">
+                        <div id="list_container_1">
+                        </div>
                     </div>
                 </div>
                 <div class="category_list">
@@ -19,7 +23,11 @@ let displyFrameWork = () => {
                         <div class="heading_desc">Description</div>
                     </div>
                     <h3 style="text-align:right;"><a href="">VIEW ALL</a></h3>
-                    <div id="list_container_2">
+                   <div id="slider">
+                        <img class="leftarrow" src="https://th.bing.com/th/id/R.3e687549bc2d0a48a973cbca08447ec4?rik=YGXkIKdpQ%2bwM%2fg&riu=http%3a%2f%2fstevekeane.com%2fimages%2fback.png&ehk=XG6aivNt56vGFX4VwDllcuL7cmnigmzVhg6Dy0bDGHo%3d&risl=&pid=ImgRaw&r=0" alt="">
+                        <img class="rightarrow" src="https://stevekeane.com/images/forward.png" alt="">
+                        <div id="list_container_2">
+                        </div>
                     </div>
                 </div>
                 <div class="category_list">
@@ -28,7 +36,11 @@ let displyFrameWork = () => {
                         <div class="heading_desc">Description</div>
                     </div>
                     <h3 style="text-align:right;"><a href="">VIEW ALL </a></h3>
-                    <div id="list_container_3">
+                    <div id="slider">
+                        <img class="leftarrow" src="https://th.bing.com/th/id/R.3e687549bc2d0a48a973cbca08447ec4?rik=YGXkIKdpQ%2bwM%2fg&riu=http%3a%2f%2fstevekeane.com%2fimages%2fback.png&ehk=XG6aivNt56vGFX4VwDllcuL7cmnigmzVhg6Dy0bDGHo%3d&risl=&pid=ImgRaw&r=0" alt="">
+                        <img class="rightarrow" src="https://stevekeane.com/images/forward.png" alt="">
+                        <div id="list_container_3">
+                        </div>
                     </div>
                 </div>
                 <div class="category_list">
@@ -37,7 +49,11 @@ let displyFrameWork = () => {
                         <div class="heading_desc">Description</div>
                     </div>
                     <h3 style="text-align:right;"><a href="">VIEW ALL</a></h3>
-                    <div id="list_container_4">
+                    <div id="slider">
+                        <img class="leftarrow" src="https://th.bing.com/th/id/R.3e687549bc2d0a48a973cbca08447ec4?rik=YGXkIKdpQ%2bwM%2fg&riu=http%3a%2f%2fstevekeane.com%2fimages%2fback.png&ehk=XG6aivNt56vGFX4VwDllcuL7cmnigmzVhg6Dy0bDGHo%3d&risl=&pid=ImgRaw&r=0" alt="">
+                        <img class="rightarrow" src="https://stevekeane.com/images/forward.png" alt="">
+                        <div id="list_container_4">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -45,8 +61,9 @@ let displyFrameWork = () => {
 }
 
 let display = (data, container) => {
+    console.log(container);
+    // container.innerHTML = "";
 
-    container.innerHTML = "";
     data.forEach(({ image, name, description, price }) => {
         let div = document.createElement("div");
         div.setAttribute("class", "card");
