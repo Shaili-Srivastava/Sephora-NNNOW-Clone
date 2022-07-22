@@ -3,6 +3,7 @@
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
+    font-family: ave;
 }
 #navbar{
     width: 100%;
@@ -145,6 +146,18 @@ gap: 5px;
     height: 20px;
     margin-left: 10px;
     cursor: pointer;
+}
+#midnav>div:nth-child(3)>div:nth-child(3)>img{
+    width: 60%;
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#midnav>div:nth-child(3)>div:nth-child(3){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff74b9;
 }
 #midnav>div:nth-child(3)>div:last-child{
     display: flex;
@@ -382,4 +395,120 @@ gap: 5px;
 #backtop{
     text-decoration: none;
     color: black;
+}
+.cartpopup1 {
+    position: absolute;
+    transform: translate(-25%, -25%);
+    top: -150%;
+    left: 20%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 20%;
+    height: auto;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+.cartpopup1.active {
+    top: 30%;
+    opacity: 1;
+    z-index: 1;
+    transform: translate(250%, -25%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.close_button1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#button>a>button {
+    border-radius: 200px;
+    background-color: white;
+    padding: 11px 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cartpopup2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -150%;
+    left: 78%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 30%;
+    height: auto;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.cartpopup2.active {
+    top: 38%;
+    opacity: 1;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.close_button2 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+#button {
+    display: grid;
+    justify-content: center;
+    row-gap: 10px;
+    margin-top: 10%;
+}
+
+#button>a>button {
+    width: 100%;
+    border-radius: 200px;
+    background-color: white;
+    padding: 11px 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#button>button:hover {
+    background-color: black;
+    color: white;
 }

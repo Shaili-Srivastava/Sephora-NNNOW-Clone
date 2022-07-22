@@ -51,13 +51,36 @@ let navbar= ()=>{
     <div>
         <div><a href="wishlist.html"><img src="https://i.ibb.co/Hqh4zqT/heart.png" alt="wishlist"></a></div>
         <div class="gap">|</div>
-        <div>
-            <a href="cart.html"><img src="https://i.ibb.co/J3Mr8YY/bag.png" alt="cart"></a></div>
+        <div id="mycart">
+            <img  src="https://i.ibb.co/J3Mr8YY/bag.png" alt="cart">
+            <p id="bagcount">1</p>
+            </div>
         <div class="gap">|</div>
         <div id="login">
             <img src="https://i.ibb.co/Z2L3KCx/user.png" alt="login"><p>Login</p></div>
     </div>
 </div>
+<div class="cartpopup1">
+        <h1>MY BAG</h1>
+        <div class="close_button1">&times;</div>
+        <hr>
+        <div>
+        <p>You don't have any items in your cart</p>
+        </div>
+        <div id="button">
+        <a href="index.html"><button>CONTINUE SHOPPING</button></a>
+        </div>
+    </div>
+    <div class="cartpopup2">
+    <h1>MY BAG</h1>
+    <div class="close_button1">&times;</div>
+    <hr>
+    <div id="bagitem"></div>    
+        <div id="button">
+            <a href="checkout.html"><button>CHECKOUT</button></a>
+            <a href="cart.html"><button>VIEW SHOPPING BAG</button></a>
+        </div>
+    </div>
 <div id="bottomnav">
     <div><a href="sale.html">SALE</a></div>
     <div class="dropmenu">
