@@ -1,0 +1,198 @@
+ body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
+        word-spacing: 0.5px;
+    }
+
+    #main {
+        width: 80%;
+        margin: auto;
+        border: 1px solid red;
+    }
+
+    #productDetail {
+        display: flex;
+        margin: 5px;
+        padding: 20px;
+        border: 3px solid green;
+        gap: 60px;
+    }
+
+    #sidePanelImage {
+        width: 10%;
+        height: fit-content;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid black;
+    }
+
+    #sidePanelImage>img {
+        width: 100%;
+    }
+
+    #middleImage {
+        width: 40%;
+        height: fit-content;
+        padding: 20px;
+        border: 1px solid violet;
+    }
+
+    #middleImage>img {
+        width: 100%;
+    }
+
+    #rightPanelDetail {
+        width: 40%;
+        padding: 10px;
+        border: 1px solid red;
+    }
+
+    #rightPanelDetail p,
+    h4 {
+        font-size: 16px;
+        line-height: 15px;
+    }
+
+    #ratingBlock {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: -20px 0px;
+    }
+
+    #ratingBlock>p {
+        font-size: 15px;
+    }
+
+    .ratingStar {
+        width: 12px;
+    }
+
+    #priceBlock {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: -20px 0px;
+    }
+
+    #priceBlock>p:last-child {
+        color: red;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .bold {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 13px;
+    }
+
+    #offerBlock {
+        display: flex;
+        gap: 5px;
+    }
+
+    #offerDetail p {
+        font-size: 14px;
+    }
+
+    #size {
+        border: 1px solid black;
+        padding: 8px;
+        width: fit-content;
+    }
+
+    #cautionDiv {
+        border: 2px solid #f49233;
+        display: flex;
+        gap: 10px;
+        justify-content: start;
+        align-items: flex-start;
+    }
+
+    #cautionDiv>img {
+        width: 40px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    #cautionDiv>div p {
+        line-height: 18px;
+    }
+
+    #addToBag {
+        background-color: #ff3399;
+        color: white;
+        border: none;
+        width: 100%;
+        padding: 15px;
+        font-weight: 600;
+        font-size: 17px;
+    }
+
+    #heartImage {
+        width: 20px;
+        border: 2px solid #ff3399;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    #shareImage {
+        width: 20px;
+        border: 2px solid #31a5e5;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    #shareAndFav {
+        margin: 15px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    #shareAndFav>div p {
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 10px;
+    }
+
+    #shareAndFav>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pincode {
+        width: 100%;
+        display: flex;
+        border: 1px solid red;
+        gap: 10px;
+    }
+
+    #pincode>button {
+        padding: 10px 25px;
+        font-weight: 900;
+        color: #c1c1c1;
+        background-color: white;
+
+    }
+
+    #pincode>input {
+        width: 50%;
+        outline: none;
+        background-color: #f3f3f3;
+        font-size: 15px;
+        padding: 10px;
+    }
