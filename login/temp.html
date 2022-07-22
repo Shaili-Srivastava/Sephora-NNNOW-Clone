@@ -8,19 +8,19 @@
     
     <title>Document</title>
 </head>
-<body>
-    <div id="center">
-        <input type="checkbox" id="show">
-        <label for="show" class="show-btn">click here</label>
+<body>    
+    <div id="mycart">HI</div>
         <div id="container-login">
-            <label for="show" class="close-btn fas fa-times"></label>
-            <div id="form-outer">
-                <form>
-                    <div class="page">
+            <label for="" class="close-btn fas fa-times"></label>
+                <form id="logInData">
+                    <div class="page" id="login">
                         <div id="text">LOGIN</div>
-                        <div id="data">
+                        <div class="data">
                             <label>Enter your Phone / Email</label>
-                            <input type="text" required>
+                            <input type="text" name="Email" required id="loginValue">
+                            <input type="text" name="Phone" required id="loginValue2">
+                            <input type="text" name="otp" required id="loginValue4">
+                            
                         </div>
                         <div class="btn">
                             <div id="inner"></div>
@@ -61,10 +61,11 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="page">
+                </form>
+                <form>
+                    <div class="page" id="loginOTP">
                         <div id="text">ENTER OTP</div>
-                        <div id="data">
+                        <div class="data" id="vry">
                             <img src="./otp.png">
                         </div>
                         <div id="vry">
@@ -73,7 +74,7 @@
                             Please enter it below, and you're done
                             </p>
                         </div>
-                        <div id="data" id="vry">
+                        <div class="data" id="vry">
                             <label>Enter your Phone / Email</label>
                             <input type="text" required>
                         </div>
@@ -86,28 +87,30 @@
                             <button type="submit">SUBMIT</button>
                         </div>
                     </div>
-
-                    <div class="page">
+                </form>
+                <form id="SignInData">
+                    <div class="page" id="signUp">
                         <div id="text">CREATE ACCOUNT</div>
-                        <div id="data">
+                        <div class="data" >
                             <label>Name*</label>
-                            <input type="text" required>
+                            <input type="text" id="sName" required>
                             <label>Email*</label>
-                            <input type="text" required>
+                            <input type="text" id="sEmail" required>
                             <label>Password*</label>
-                            <input type="text" required>
+                            <input type="text" id="sPassword" required>
                             <label>Phone Number*</label>
-                            <input type="text" required>
+                            <input type="text" id="sNumber" required>
                             <div class="btn" id="vry">
                                 <div id="inner"></div>
-                                <button type="submit">CONTINUE</button>
+                                <button type="submit" id>CONTINUE</button>
                             </div>
                         </div>
                         
                     </div>
-
-                    <div class="page">
-                        <div id="text">VERIFY PHONE NUMBER</div>
+                </form>
+                <form>
+                    <div class="page" id="signUpOTP">
+                        <div id="vtext">VERIFY PHONE NUMBER</div>
                         <div id="vry">
                             <img src="./VERFY NUM.png">
                         </div>
@@ -115,11 +118,11 @@
                             <p>We've sent an OTP to +91 7077511496 via SMS. <br>
                             Please enter it below, and you're done</p>
                         </div>
-                        <div id="data" id="vry">
+                        <div class="data" id="vry">
                             <label>Enter your Phone / Email</label>
                             <input type="text" required>
                         </div>
-                        <div id="data">
+                        <div class="data">
                             <label>Didn't Recieve? <a href="#">Resend</a></label>
                         </div>
                         <div class="btn" id="vry">
