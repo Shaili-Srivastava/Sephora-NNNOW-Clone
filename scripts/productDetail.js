@@ -1,5 +1,5 @@
 
-let data = [{
+let data1 = [{
     Product: "MAKEUP",
     Section: "FACE",
     Sub_Section: "Foundation",
@@ -49,6 +49,8 @@ let data = [{
 },];
 
 
+let data = JSON.parse(localStorage.getItem("sephoraData")) || [];
+
 let displayProduct = (data) => {
     console.log("Working");
     let image1 = document.getElementById("panelImage1");
@@ -68,7 +70,7 @@ let displayProduct = (data) => {
     if (data.Rating == "") {
         let random = Math.floor(Math.random() * 5) + 1;
         prodRating.innerText = `( ${random} Ratings)`;
-    }else prodRating.innerText = `( ${data.Rating} Ratings)`;
+    } else prodRating.innerText = `( ${data.Rating} Ratings)`;
 
     let prodOgPrice = document.getElementById("ogPrice");
     let prodOfferPrice = document.getElementById("offerPrice");
@@ -92,3 +94,39 @@ let displayProduct = (data) => {
 
 }
 displayProduct(data[0]);
+
+document.querySelector("#addToBag").addEventListener("click", () => {
+    localStorage.setItem("bagdata", JSON.stringify(data));
+    alert("item added to bag");
+})
+document.querySelector("#heartImage").addEventListener("click", () => {
+    localStorage.setItem("myfavdata", JSON.stringify(data));
+    alert("item added to Favourites");
+})
+
+
+
+document.querySelectorAll(".commonBottomDiv").forEach((button, index) => {
+    button.addEventListener("click", function () {
+
+        document.querySelectorAll(".commonBottomDiv").forEach((button) => {
+            button.classList.remove("afterClickBottomDiv");
+        });
+        document.querySelector("#finerDetails").style.zIndex = "0";
+        document.querySelector("#sephoraCollectionDetails").style.zIndex = "0";
+        document.querySelector("#returnAndExchangeDetails").style.zIndex = "0";
+        if (index == 0) {
+            let div = document.querySelector("#finerDetails")
+            div.style.zIndex = "1";
+        } else if (index == 1) {
+            let div = document.querySelector("#sephoraCollectionDetails")
+            div.style.zIndex = "1";
+        } else {
+            let div = document.querySelector("#returnAndExchangeDetails")
+            div.style.zIndex = "1";
+        }
+        button.classList.add("afterClickBottomDiv");
+    });
+});
+
+

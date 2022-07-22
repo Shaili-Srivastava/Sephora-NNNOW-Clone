@@ -1,31 +1,39 @@
  .card {
-     width: 100px;
-     margin: auto;
+     width: 200px;
+     /* margin: auto; */
      /* background-color: yellow; */
-     padding: 10px;
+     padding: 20px;
      text-align: center;
      position: relative;
      border: 1px solid black;
  }
 
  .card>img {
-     width: 90%;
+     width: 80%;
      border: 1px solid red;
  }
 
+ .card>h4 {
+     margin: 0px;
+ }
+ .card>p {
+     margin: 0px;
+ }
+
  .hiddenDiv {
+     width: 86%;
      margin: auto;
      background-color: green;
      display: flex;
      justify-content: center;
      align-items: center;
-     z-index: 1;
+     z-index: 0;
      padding: 20px 10px;
      position: absolute;
      visibility: hidden;
-     bottom: 220px;
+     bottom: 155px;
+     left: 0px;
      right: 0px;
-     width: 100%;
      height: 0px;
      transition: .5s ease;
  }
