@@ -3,6 +3,8 @@ import { displyFrameWork, display } from "../component/main.js";
 let main = document.querySelector("#main");
 main.innerHTML = displyFrameWork();
 
+let mainImg = document.getElementById("mainPageImg")
+mainImg.src = "https://logan.nnnow.com/content/dam/nnnow-project/27-sep-2021/Tools_BrushesDesktop.jpg"
 
 let data = [{
     image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
@@ -134,65 +136,35 @@ let myslider = (sliderbox, direction, speed, distance, step) => {
 
 
 document.querySelector("#sidebar").innerHTML = `<ul>
-            <li class="sidebar_cat">FACE
-                <ul class="sidebar_cat_content">
-                    <option><a href="#">Foundation</a></option>
-                    <option><a href="#">BB & CC Cream</a></option>
-                    <option><a href="#">Concealer</a></option>
-                </ul>
-            </li>
-            <li class="sidebar_cat">CHEEK
-                <ul class="sidebar_cat_content">
-                    <option><a href="#">Brush</a></option>
-                    <option><a href="#">Bronzer</a></option>
-                    <option><a href="#">Highlighter</a></option>
-                </ul>
-            </li>
-            <li class="sidebar_cat">EYE
-                <ul class="sidebar_cat_content">
-                    <option><a href="#">Mascara</a></option>
-                    <option><a href="#">Eyeliner</a></option>
-                    <option><a href="#">Eyeslashes</a></option>
-                </ul>
-            <li class="sidebar_cat">LIP
-                <ul class="sidebar_cat_content">
-                    <option><a href="#">Lip Stick</a></option>
-                    <option><a href="#">Lip Gloss</a></option>
-                    <option><a href="#">Lip Plumper</a></option>
-                </ul>
-            </li>
-
-            <li class="sidebar_cat">BRUSHES & APPLICATORS
+            <li class="sidebar_cat">BRUSHES
                 <ul class="sidebar_cat_content">
                     <option><a href="#">Face Brushes</a></option>
+                    <option><a href="#">Eye Brushes</a></option>
                     <option><a href="#">Lip Brushes</a></option>
+
+                </ul>
+            </li>
+            <li class="sidebar_cat">TOOLS
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Sponges & Applicators</a></option>
+                    <option><a href="#">Face Tools</a></option>
+                    <option><a href="#">Hair Clips</a></option>
+                    <option><a href="#">Sharpeners</a></option>
+                    <option><a href="#">Tweezers & Eyebrow Tools</a></option>
+                    <option><a href="#">Eyelash Curlers</a></option>
+                    <option><a href="#">Accessories</a></option>
+                    <option><a href="#">Brush Cleaners</a></option>
+                    
+
+                </ul>
+            </li>
+            <li class="sidebar_cat">VEGAN
+                <ul class="sidebar_cat_content">
+                    <option><a href="#">Face Brushes</a></option>
                     <option><a href="#">Eye Brushes</a></option>
                 </ul>
             </li>
-            <li class="sidebar_cat">ACCESSORIES
-                <ul class="sidebar_cat_content">
-                    <option><a href="#">Nail Tools</a></option>
-                    <option><a href="#">make Up Tools & Accessories</a></option>
-                </ul>
-            </li>
-            <li class="sidebar_cat">NAIL
-                <ul class="sidebar_cat_content">
-                    <option><a href="#">Nail Polish</a></option>
-                    <option><a href="#">Nail Care</a></option>
-                </ul>
-            </li>
-            <li class="sidebar_cat">MAKEUP PALETTES
-                    <ul class="sidebar_cat_content">
-                        <option><a href="#">Makeup Platters</a></option>
-                    </ul>
-            </li>
-            <li class="sidebar_cat">VEGAN</a>
-                <ul class="sidebar_cat_content">
-                    <option><a href="#">Eye</a></option>
-                    <option><a href="#">Face</a></option>
-                </ul>
-            </li>
-        </ul>`;
+           `;
 
 
 
