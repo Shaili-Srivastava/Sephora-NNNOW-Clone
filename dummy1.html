@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cartpopup1 {
+    position: absolute;
+    transform: translate(-25%, -25%);
+    top: -50%;
+    left: -20%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 20%;
+    height: auto;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+.cartpopup1.active {
+    top: 20%;
+    opacity: 1;
+    transform: translate(250%, -25%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.close_button1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+#button>a>button {
+    border-radius: 200px;
+    background-color: white;
+    padding: 11px 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div id="mycart">HI</div>
+    <div class="cartpopup1">
+        <h1>MY BAG</h1>
+        <div class="close_button1">&times;</div>
+        <hr>
+        <div>
+        <p>You don't have any items in your cart</p>
+        </div>
+        <div id="button">
+        <a href="index.html"><button>CONTINUE SHOPPING</button></a>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let mycart=document.querySelector("#mycart");
+    mycart.addEventListener("click", function(){
+        document.querySelector(".cartpopup1").classList.add("active");
+    })
+    
+    document.querySelector(".close_button1").addEventListener("click", function () {
+    document.querySelector(".cartpopup1").classList.remove("active");
+});
+   
+</script>

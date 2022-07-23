@@ -1,0 +1,514 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepphora/mybag</title>
+    <style>
+.menubar{
+    position: relative;
+    display: inline block;
+    /* float: right; */
+}
+.seconddrop{
+    display: none;
+    position: absolute;
+    width: 15%;
+    z-index: 1;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    right: 1%; 
+}
+.dropmenu:hover .seconddrop{  
+    display: grid;
+    margin: auto;
+    grid-template: auto/repeat(1,auto);
+    justify-content: space-around;
+    gap: 20px;
+    background-color: white;
+    text-align: center;
+}
+.dropmenu:hover:hover .menubar{
+    width: 100%;
+    background-color: transparent;
+}
+.seconddrop>a>img{
+    width: 20%;
+    height: 20px;
+}
+.seconddrop>a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    gap: 10px;
+}
+.seconddrop>hr{
+    width: 120px;
+}
+#navbag{
+    width: 95%;
+    display: grid;
+    grid-template: auto/repeat(2,auto);
+    justify-content: space-between;
+    text-align: center;
+}
+#navbag>div:first-child>a>img{
+    width: 40%;
+}
+#navbag2{
+    width: 100%;
+    background-color: #0092df;
+    padding: 10px 0px;
+    color: white;
+}
+#navbag2>h2{
+    margin-left: 10%;
+}
+.cartpopup1 {
+    position: absolute;
+    transform: translate(-25%, -25%);
+    top: -50%;
+    left: -90%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 40%;
+    height: auto;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+.cartpopup1.active {
+    top: 30%;
+    opacity: 1;
+    transform: translate(250%, -25%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.close_button1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.close_button1+div{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.close_button1+div>input{
+    padding: 10px;
+    border: 0ch;
+}
+.close_button1+div>img{
+    cursor: pointer;
+
+}
+#navbag3{
+    width: 100%;
+    display: grid;
+    grid-template: auto/repeat(2,auto);
+    justify-content: space-around;
+    gap: 10px;
+}
+#leftnavbag3{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    justify-content: space-around;
+    gap: 10px;
+}
+.leftfirstrow{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    margin-bottom: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+}
+.mybagitem{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    line-height: 20px;
+
+}
+.mybagitem>div:first-child>img{
+width: 40%;
+}
+.leftfirstrow>select{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftfirstrow>div:last-child{
+    display: flex;
+    gap: 2px;
+}
+.subbagitemright{
+    width: 100%;
+display: flex;
+gap: 20px;
+text-decoration: underline;
+}
+.subbagitemright>p{
+    cursor: pointer;
+}
+#rightnavbag3{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template: repeat(4,auto);
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+#firstrightarrrow{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #f2f2f2;
+    padding: 0px 10px;
+}
+#firstrightarrrow>img{
+    width: 10%;
+    height: 30px;
+}
+#secondrightarrow{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #f2f2f2;
+}
+#secondrightarrow>div{
+width: 100%;
+display: grid;
+grid-template: auto/repeat(2,auto);
+justify-content: space-around;
+gap: 10px;
+}
+#secondrightarrow>div>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+#secondrightarrow>div>div:nth-child(3){
+    color: red;
+}
+#secondrightarrow>div>div:nth-child(4){
+    color: red;
+}
+#thirdrightarrow{
+    width: 80%;
+display: grid;
+margin: auto;
+gap: 20px;
+}
+#thirdrightarrow>a{
+text-decoration: none;
+color: black;
+font-weight: bolder;
+padding: 10px 20px;
+
+}
+#thirdrightarrow>a:first-child{
+background-color: #ff3399;
+color: white;
+
+}
+#thirdrightarrow>a:nth-child(2){
+    border: 2px solid;
+}
+#thirdrightarrow>a:nth-child(2):hover{
+    border-color: #ff3399;
+    color: #ff3399;
+}
+#thirdrightarrow>img{
+    width: 100%;
+}
+
+</style>
+</head>
+<body>
+    <div id="navbag">
+        <div>
+            <a href="index.html"><img src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png" alt="Sepphora"></a>
+        </div>
+        
+        <div class="dropmenu">
+    <div class="menubar"><p>User</p></div>
+        <div class="seconddrop">
+            <a href="account.html"><img src="https://i.ibb.co/Z2L3KCx/user.png" alt="login">My Account</a>
+            <a href="wishlist.html"><img src="https://i.ibb.co/Hqh4zqT/heart.png" alt="wishlist">Favourites</a>
+            <a href="orders.html"><img  src="https://i.ibb.co/J3Mr8YY/bag.png" alt="cart">My Orders</a>
+            <hr>
+            <a href="index.html"><img src="https://ywcaspokane.org/wp-content/uploads/2016/05/YWCA_Escape_Button.png" alt="sign out">Sign Out</a>          
+        </div>
+        </div></div>
+
+    <div id="navbag2">
+        <h2 id="totalbagcount"></h2>
+    </div>
+    <div id="navbag3">
+        <div id="leftnavbag3">
+        </div>
+        <div id="rightnavbag3">
+            <div id="firstrightarrrow">
+                   <img src="https://static.nnnow.com/client/assets/images/promotions/icon_promo.png" alt="promo code">
+                   <h3>APPLY PROMO CODE</h3>
+            </div>
+            <div id="secondrightarrow">
+                <h2>OVERVIEW</h2>
+                <div>
+                    <div><p>Subtotal</p></div>
+                    <div><p>Rs.</p><p id="bagsubtotal"></p></div>
+                    <div><p>Discount</p></div>
+                    <div><p>-Rs.</p><p id="bagdiscount"></p></div>
+                    <div><p>GST</p></div>
+                    <div><p>Rs.</p><p id="baggst"></p></div>
+                    <div>Delivery Charges</div>
+                    <div><p>Rs.</p><p id="bagdelivery"></p></div>
+                    <div><h3>Total</h3></div>
+                    <div><h3>Rs.</h3><h3 id="bagtotal"></h3></div>
+                </div>
+            </div>
+            <div id="thirdrightarrow">
+                <a id="checkoutdata" href="checkout.html">CHECKOUT</a>
+                <a href="index.html">SHOP MORE</a>
+                <img src="https://static.nnnow.com/mybag_offer_banner.jpg" alt="yono sbi">
+            </div>
+        </div>
+        </div>
+        <div class="cartpopup1">
+            <h1>Apply / Select promo code</h1>
+            <div class="close_button1">&times;</div>
+            <div>
+            <input type="text" id="promocodevalue" placeholder="Enter Promo">
+            <img id="submitpromo" src="https://static.nnnow.com/client/assets/images/promotions/go_back_btn.png" alt="arrow">
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    let bagdata=[{
+        "Product": "MAKEUP",
+        "Section": "FACE",
+        "Sub_Section": "Foundation",
+        "Image_1": "https://cdn16.nnnow.com/web-images/large/styles/CH65NKWC2ZU/1533201155002/1.jpg",
+        "Image_2": "https://cdn16.nnnow.com/web-images/large/styles/CH65NKWC2ZU/1617175589724/2.jpg",
+        "Image_3": "",
+        "Name": "SEPHORA COLLECTION",
+        "Description": "Glow Perfection Foundation - 25 Beige",
+        "Price": "1690",
+        "Offer_Price": "1352",
+        "Offer": "20",
+        "Size": "20ML",
+        "Rating": "5",
+        "id": 1
+      },{
+        "Product": "MAKEUP",
+        "Section": "FACE",
+        "Sub_Section": "Foundation",
+        "Image_1": "https://cdn16.nnnow.com/web-images/large/styles/CH65NKWC2ZU/1533201155002/1.jpg",
+        "Image_2": "https://cdn16.nnnow.com/web-images/large/styles/CH65NKWC2ZU/1617175589724/2.jpg",
+        "Image_3": "",
+        "Name": "SEPHORA COLLECTION",
+        "Description": "Glow Perfection Foundation - 25 Beige",
+        "Price": "1690",
+        "Offer_Price": "1352",
+        "Offer": "20",
+        "Size": "20ML",
+        "Rating": "5",
+        "id": 1
+      }, {
+        "Product": "MAKEUP",
+        "Section": "FACE",
+        "Sub_Section": "BB & CC Cream",
+        "Image_1": "https://cdn09.nnnow.com/web-images/large/styles/DJA1WA697WV/1585307687501/1.jpg",
+        "Image_2": "https://cdn16.nnnow.com/web-images/large/styles/DJA1WA697WV/1616758676356/50.jpg",
+        "Image_3": "",
+        "Name": "CLINIQUE",
+        "Description": "Clinique ID™ With Dramatically Different™ Moisturizing BB-Gel",
+        "Price": "2950",
+        "Offer_Price": "",
+        "Offer": "",
+        "Size": "115ML",
+        "Rating": "",
+        "id": 7
+      }]
+    // let bagdata=JSON.parse(localStorage.getItem("bagdata"))||[];
+    let myfavdata=JSON.parse(localStorage.getItem("myfavdata"))||[];
+    let totalbagprice=0;
+    let leftnavbag3=document.querySelector("#leftnavbag3");
+    bagdata.forEach((el,index) => {
+        let leftfirstrow=document.createElement("div");
+        leftfirstrow.setAttribute("class", "leftfirstrow");
+        let mybagitem=document.createElement("div");
+        mybagitem.setAttribute("class","mybagitem");
+        let mybagitemleft=document.createElement("div");
+        let img1=document.createElement("img");
+        img1.src=el.Image_1;
+        mybagitemleft.append(img1);
+        mybagitemright=document.createElement("div");
+        let name=document.createElement("p");
+        name.innerText=el.Name;
+        let section=document.createElement("h3");
+        section.innerText=el.Sub_Section;
+        let size=document.createElement("p");
+        size.innerText=el.Size;
+        let movefav=document.createElement("p");
+        movefav.innerText="Move to Favourite";
+        movefav.addEventListener("click", ()=>{
+            myfavdata.push(el);
+            localStorage.setItem("myfavdata", JSON.stringify(myfavdata));
+            bagdata.splice(index,1);
+            localStorage.setItem("bagdata",JSON.stringify(bagdata));
+        })
+        itemremove=document.createElement("p");
+        itemremove.innerText="Remove";
+        itemremove.addEventListener("click", ()=>{
+            bagdata.splice(index,1);
+            localStorage.setItem("bagdata",JSON.stringify(bagdata));
+        })
+        let subbagitemright=document.createElement("div");
+        subbagitemright.setAttribute("class","subbagitemright");
+        subbagitemright.append(movefav,itemremove)
+        mybagitemright.append(name,section,size,subbagitemright);
+        
+        mybagitem.append(mybagitemleft,mybagitemright);
+        let qty=document.createElement("select");
+        let opt1=document.createElement("option");
+        opt1.value=1;
+        opt1.innerText=1;
+        let opt2=document.createElement("option");
+        opt2.value=2;
+        opt2.innerText=2;
+        let opt3=document.createElement("option");
+        opt3.value=3;
+        opt3.innerText=3;
+        let opt4=document.createElement("option");
+        opt4.value=4;
+        opt4.innerText=4;
+        qty.append(opt1,opt2,opt3,opt4);
+
+        
+        let itemprice=document.createElement("div");
+        let pricetag=document.createElement("h2");
+        pricetag.innerText="Rs."
+        let price=document.createElement("h2");
+        let updatedprice=el.Offer_Price;
+        if(el.Offer_Price==""){
+            updatedprice=el.Price;
+            price.innerText=updatedprice;
+        }
+        else{
+            let updatedprice=el.Offer_Price;
+            price.innerText=updatedprice;
+        }
+        
+        itemprice.append(pricetag,price);
+       
+        qty.addEventListener("change",()=>{
+            if(el.Offer_Price==""){
+                updatedprice=eval(el.Price*qty.value);
+                price.innerText=updatedprice
+        }
+        else{
+            updatedprice=eval(el.Offer_Price*qty.value);
+            price.innerText=updatedprice;
+        }
+        });
+        totalbagprice+=Number(updatedprice);
+
+        leftfirstrow.append(mybagitem,qty,itemprice);
+        leftnavbag3.append(leftfirstrow);
+        let checkoutdata=document.querySelector("#checkoutdata");
+        checkoutdata.addEventListener("click", ()=>{
+            event.preventDefault();
+            let obj={
+                Name:el.Name,
+                Sub_Section:el.Sub_Section,
+                Size:el.Size,
+                Price:updatedprice,
+                Qty:qty.value
+
+            };
+            
+            console.log(obj);
+        });
+
+
+        
+    });
+    let promocode=document.querySelector("#firstrightarrrow");
+    promocode.addEventListener("click", function(){
+        document.querySelector(".cartpopup1").classList.add("active");
+    });
+    
+    document.querySelector(".close_button1").addEventListener("click", function () {
+    document.querySelector(".cartpopup1").classList.remove("active");
+});
+let bagsubtotal=document.querySelector("#bagsubtotal").innerText+=totalbagprice;
+let bagdelivery=document.querySelector("#bagdelivery");
+bagdelivery.innerText=(Math.random()*100).toFixed(0);
+let submitpromo=document.querySelector("#submitpromo");
+let bagdiscount=document.querySelector("#bagdiscount");
+bagdiscount.innerText=0;
+submitpromo.addEventListener("click", ()=>{
+    let promocodevalue=document.querySelector("#promocodevalue").value;
+    if(promocodevalue=="masai10"){
+        let bagdiscount=document.querySelector("#bagdiscount");
+        bagdiscount.innerText=eval(bagsubtotal*.1).toFixed(2);
+        document.querySelector(".cartpopup1").classList.remove("active");
+        bagtotal.innerText=eval(bagsubtotal-Number(bagdiscount.innerText)+Number(bagdelivery.innerText)+Number(baggst.innerText)).toFixed(2);
+    }
+    else{
+        alert("Invalid Promocode");
+    }
+});
+let baggst=document.querySelector("#baggst");
+baggst.innerText=eval((bagsubtotal-bagdiscount.innerText)*.18).toFixed(2);
+let bagtotal=document.querySelector("#bagtotal");
+bagtotal.innerText=eval(bagsubtotal-Number(bagdiscount.innerText)+Number(bagdelivery.innerText)+Number(baggst.innerText)).toFixed(2);
+let totalbagcount=document.querySelector("#totalbagcount");
+totalbagcount.innerText=`MY BAG (${bagdata.length})`;
+</script>
