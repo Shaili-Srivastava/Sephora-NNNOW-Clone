@@ -1,0 +1,192 @@
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ #main {
+     width: 80%;
+     margin: auto;
+     /* border: 1px solid red; */
+ }
+
+ #main>img {
+     width: 100%;
+     /* border: 1px solid violet; */
+ }
+
+ #content {
+     display: flex;
+     /* border: 1px solid red; */
+     margin-top: 30px;
+ }
+
+ #sidebar {
+     width: 25%;
+     border: 2px solid black;
+     margin: 5px;
+ }
+
+ #productsList {
+     width: 75%;
+     border: 2px solid black;
+     margin: 5px;
+ }
+
+ .category_list {
+     /* border: 2px solid red; */
+     margin: 5px;
+ }
+
+ .list_heading {
+     border: 1px solid blue;
+     background-color: #f3f3f3;
+     margin: 2px;
+     display: flex;
+     justify-content: flex-start;
+     gap: 30px;
+     padding: 10px 30px;
+     align-items: center;
+
+ }
+
+ .list_heading>img {
+     width: 100%;
+ }
+
+ .heading_name {
+     font-size: 25px;
+     font-weight: 900;
+ }
+
+ .heading_desc {
+     font-size: 22px;
+ }
+
+ /* ------------------------------- slider----------------------- */
+ .slider {
+     display: flex;
+     width: 100%;
+     position: relative;
+
+     /* border: 3px solid black; */
+ }
+
+ .slider::-webkit-scrollbar {
+     width: 0;
+     height: 0;
+ }
+
+ .leftarrow {
+     position: absolute;
+     top: 180px;
+     left: 5px;
+     z-index: 1;
+ }
+
+ .rightarrow {
+     position: absolute;
+     top: 180px;
+     right: 5px;
+     z-index: 1;
+ }
+
+ .leftarrow:hover {
+     cursor: pointer;
+     background-color: red;
+     border-radius: 30%;
+     opacity: 0.7;
+ }
+
+ .rightarrow:hover {
+     cursor: pointer;
+     background-color: red;
+     border-radius: 30%;
+     opacity: 0.7;
+ }
+
+ #list_container_1 {
+     display: grid;
+     grid-template-columns: repeat(7, 25%);
+     justify-content: flex-start;
+     gap: 10px;
+     overflow-x: auto;
+
+ }
+
+ #list_container_2 {
+     display: grid;
+     grid-template-columns: repeat(7, 25%);
+     justify-content: flex-start;
+     gap: 10px;
+     overflow-x: auto;
+ }
+
+ #list_container_3 {
+     display: grid;
+     grid-template-columns: repeat(7, 25%);
+     justify-content: flex-start;
+     gap: 10px;
+     overflow-x: auto;
+ }
+
+ #list_container_4 {
+     display: grid;
+     grid-template-columns: repeat(7, 25%);
+     justify-content: flex-start;
+     gap: 10px;
+     overflow-x: auto;
+ }
+
+
+ /* -------------------- sidebar ------------------------- */
+ #sidebar ul ul li {
+     width: 400px;
+     float: none;
+     display: list-item;
+     position: relative;
+ }
+
+ /* Hide Dropdowns by Default */
+ #sidebar ul li ul {
+     display: none;
+     position: relative;
+     left: 10px;
+     /* the height of the main nav */
+ }
+
+ #sidebar {
+     /* border: 1px solid black; */
+     width: 30%;
+ }
+
+ #sidebar ul {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     position: relative;
+ }
+
+ b {
+     font-size: 20px;
+     font-weight: 900;
+ }
+
+ #sidebar ul li {
+     display: flex;
+     flex-direction: column;
+     /* border: 1px solid black; */
+ }
+
+ #sidebar li,
+ option,
+ a {
+     display: flex;
+     flex-direction: column;
+     padding: 0 10px;
+     color: black;
+     font-size: 15px;
+     text-decoration: none;
+ }
+
+
+
+ /* ---------------------------------------------- */

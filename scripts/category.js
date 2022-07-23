@@ -6,68 +6,137 @@ main.innerHTML = displyFrameWork();
 
 let data = [{
     image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
-    name: "CLINIQUE",
+    name: "1",
     description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
     price: 1956,
 },
 {
     image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
-    name: "CLINIQUE",
+    name: "2",
     description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
     price: 1956,
 },
 {
     image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
-    name: "CLINIQUE",
+    name: "3",
     description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
     price: 1956,
 },
 {
     image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
-    name: "CLINIQUE",
+    name: "4",
     description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
     price: 1956,
 },
-
+{
+    image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
+    name: "5",
+    description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
+    price: 1956,
+},
+{
+    image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
+    name: "6",
+    description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
+    price: 1956,
+},
+{
+    image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
+    name: "7",
+    description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
+    price: 1956,
+},
+{
+    image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
+    name: "8",
+    description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
+    price: 1956,
+},
+{
+    image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
+    name: "9",
+    description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
+    price: 1956,
+},
+{
+    image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
+    name: "10",
+    description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
+    price: 1956,
+},
+{
+    image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
+    name: "11",
+    description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
+    price: 1956,
+},
 ];
-let data1 = [{
-    image: "https://cdn16.nnnow.com/web-images/medium/styles/Z129L8O6GRT/1525241175054/1.jpg",
-    name: "CLINIQUE",
-    description: "Beyond Perfecting™ Super Concealer Camouflage + 24-Hour Wear- 14 Moderately Fair",
-    price: 1956,
-},]
+
 
 let cont1 = document.getElementById("list_container_1");
 let cont2 = document.getElementById("list_container_2");
 let cont3 = document.getElementById("list_container_3");
-let cont4 = document.getElementById("demo");
+let cont4 = document.getElementById("list_container_4");
 
 
 display(data, cont1);
 display(data, cont2);
 display(data, cont3);
-display(data1, cont4);
+display(data, cont4);
 
 
-let elements = document.getElementsByClassName("sidebar_cat");
-
-for (let i = 0; i < elements.length; i++) {
-    elements[i].addEventListener("click", toggle);
-}
-// elements.addEventListener("click",toggle());
-
-
-function toggle() {
-    let toggleValue = document.getElementsByClassName("sidebar_cat_content");
-    for (let i = 0; i < toggleValue.length; i++) {
-        if (toggleValue[i].style.display == "block") {
-            toggleValue[i].style.display = "none";
-        } else {
-            toggleValue[i].style.display = "block";
+document.querySelectorAll(".rightarrow").forEach((button, index) => {
+    button.addEventListener("click", function () {
+        let sliderbox1 = document.querySelector("#list_container_1");
+        let sliderbox2 = document.querySelector("#list_container_2");
+        let sliderbox3 = document.querySelector("#list_container_3");
+        let sliderbox4 = document.querySelector("#list_container_4");
+        if (index == 0) {
+            myslider(sliderbox1, "right", 40, 300, 40);
+        } else if (index == 1) {
+            myslider(sliderbox2, "right", 40, 300, 40);
+        } else if (index == 2) {
+            myslider(sliderbox3, "right", 40, 300, 40);
+        } else if (index == 3) {
+            myslider(sliderbox4, "right", 40, 300, 40);
         }
-    }
-
+    })
+});
+document.querySelectorAll(".leftarrow").forEach((button, index) => {
+    button.addEventListener("click", function () {
+        let sliderbox1 = document.querySelector("#list_container_1");
+        let sliderbox2 = document.querySelector("#list_container_2");
+        let sliderbox3 = document.querySelector("#list_container_3");
+        let sliderbox4 = document.querySelector("#list_container_4");
+        if (index == 0) {
+            myslider(sliderbox1, "left", 40, 300, 40);
+        } else if (index == 1) {
+            myslider(sliderbox2, "left", 40, 300, 40);
+        } else if (index == 2) {
+            myslider(sliderbox3, "left", 40, 300, 40);
+        } else if (index == 3) {
+            myslider(sliderbox4, "left", 40, 300, 40);
+        }
+    })
+});
+let myslider = (sliderbox, direction, speed, distance, step) => {
+    console.log("hi")
+    let scrollAmount = 0;
+    let slidetime = setInterval(() => {
+        if (direction == "left") {
+            sliderbox.scrollLeft -= step;
+        }
+        else {
+            sliderbox.scrollLeft += step;
+            console.log("w")
+        }
+        scrollAmount += step;
+        if (scrollAmount >= distance) {
+            window.clearInterval(slidetime);
+        }
+    }, speed)
 }
+
 
 
 document.querySelector("#sidebar").innerHTML = `<ul>
@@ -133,3 +202,18 @@ document.querySelector("#sidebar").innerHTML = `<ul>
 
 
 
+document.querySelectorAll(".sidebar_cat").forEach((button) => {
+    button.addEventListener("click", function () {
+        console.log("button", button.firstElementChild)
+        // button.firstElementChild.style.backgroundColor="red";
+
+        if (button.firstElementChild.style.display == "none" && button.style.color == "black") {
+
+            button.firstElementChild.style.display = "block";
+            button.style.color = "red";
+        } else {
+            button.firstElementChild.style.display = "none";
+            button.style.color = "black";
+        }
+    });
+});

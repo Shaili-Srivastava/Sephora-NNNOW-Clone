@@ -3423,10 +3423,9 @@ let data=[
           "Rating": "",
           "id": 36
         }
+<<<<<<< HEAD:Data Collection/data.js
 ]
 
 
 let SephoraMainData1=JSON.parse(localStorage.getItem("SephoraMainData"))||[];
     localStorage.setItem("SephoraMainData",JSON.stringify(data));
- 
- 
