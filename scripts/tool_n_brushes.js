@@ -3,7 +3,7 @@ import { displyFrameWork, display } from "../component/main.js";
 let main = document.querySelector("#main");
 main.innerHTML = displyFrameWork();
 
-let mainImg = document.getElementById("mainPageImg")
+let mainImg = document.getElementById("mainPageSrc")
 mainImg.src = "https://logan.nnnow.com/content/dam/nnnow-project/27-sep-2021/Tools_BrushesDesktop.jpg"
 
 let data = [{

@@ -64,16 +64,17 @@ let display = (data, container) => {
         let div = document.createElement("div");
         div.setAttribute("class", "card");
 
-        div.addEventListener("click", () => {
+        let imgDiv = document.createElement("div");
+        imgDiv.setAttribute("class", "imgDIV")
+        let img = document.createElement("img");
+        img.src = el.Image_1;
+
+        img.addEventListener("click", () => {
             let data = [];
             data.push(el);
             localStorage.setItem("sephoraData", JSON.stringify(data));
             window.location.href = "productDetail.html"
         })
-
-        let img = document.createElement("img");
-        img.src = el.Image_1;
-
         let hiddenDiv = document.createElement("div");
         hiddenDiv.setAttribute("class", "hiddenDiv");
 
@@ -107,6 +108,8 @@ let display = (data, container) => {
 
         hiddenDiv.append(addTobag, fav);
 
+        imgDiv.append(img, hiddenDiv);
+
         let pname = document.createElement("h4");
         pname.innerText = el.Name;
 
@@ -116,7 +119,7 @@ let display = (data, container) => {
         let pprice = document.createElement("h4");
         pprice.innerText = `Rs. ${el.Price}`;
 
-        div.append(img, hiddenDiv, pname, pdesc, pprice);
+        div.append(imgDiv, pname, pdesc, pprice);
         container.append(div);
     })
 }

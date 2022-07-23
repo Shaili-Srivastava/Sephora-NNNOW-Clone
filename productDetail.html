@@ -7,9 +7,11 @@
     <title>Product Detail</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="./styles/productDetail.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
 </head>
 
 <body>
+    <div id="navbar"></div>
     <div id="main">
         <div id="productDetail">
             <div id="sidePanelImage">
@@ -103,9 +105,9 @@
     <div id="bottomDetail">
 
         <div id="bottomDetailNavbar">
-            <p class="commonBottomDiv afterClickBottomDiv" id="firstNav"  >THE FINER DETAILS</p>
-            <p class="commonBottomDiv" id="secondNav" >ABOUT SEPHORA COLLECTION</p>
-            <p class="commonBottomDiv" id="thirdNav" >RETURNS AND EXCHANGE</p>
+            <p class="commonBottomDiv afterClickBottomDiv" id="firstNav">THE FINER DETAILS</p>
+            <p class="commonBottomDiv" id="secondNav">ABOUT SEPHORA COLLECTION</p>
+            <p class="commonBottomDiv" id="thirdNav">RETURNS AND EXCHANGE</p>
         </div>
         <div id="finerDetails">
             <b>What It is </b>
@@ -147,8 +149,10 @@
                 products.</p>
         </div>
     </div>
+    <div id="footer"></div>
 
 </body>
 
 </html>
-<script src="./scripts/productDetail.js"></script>
+<script src="./scripts/productDetail.js" type="module"></script>
+<script src="./scripts/navbarFunctions.js"></script>
