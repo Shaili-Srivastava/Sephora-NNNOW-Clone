@@ -278,6 +278,10 @@ body{
     width: 100%;
     background-color: transparent;
 }
+.dropmenu a,
+p:hover {
+    color: hotpink;
+}
 
 .seconddrop>a,
 p {
