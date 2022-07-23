@@ -73,7 +73,7 @@ let navbar= ()=>{
     </div>
     <div class="cartpopup2">
     <h1>MY BAG</h1>
-    <div class="close_button1">&times;</div>
+    <div class="close_button2">&times;</div>
     <hr>
     <div id="bagitem"></div>    
         <div id="button">

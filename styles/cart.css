@@ -1,0 +1,265 @@
+.menubar{
+    position: relative;
+    display: inline block;
+    /* float: right; */
+}
+.seconddrop{
+    display: none;
+    position: absolute;
+    width: 15%;
+    z-index: 1;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    right: 1%; 
+}
+.dropmenu:hover .seconddrop{  
+    display: grid;
+    margin: auto;
+    grid-template: auto/repeat(1,auto);
+    justify-content: space-around;
+    gap: 20px;
+    background-color: white;
+    text-align: center;
+}
+.dropmenu:hover:hover .menubar{
+    width: 100%;
+    background-color: transparent;
+}
+.seconddrop>a>img{
+    width: 20%;
+    height: 20px;
+}
+.seconddrop>a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    gap: 10px;
+}
+.seconddrop>hr{
+    width: 120px;
+}
+#navbag{
+    width: 95%;
+    display: grid;
+    grid-template: auto/repeat(2,auto);
+    justify-content: space-between;
+    text-align: center;
+}
+#navbag>div:first-child>a>img{
+    width: 40%;
+}
+#navbag2{
+    width: 100%;
+    background-color: #0092df;
+    padding: 10px 0px;
+    color: white;
+}
+#navbag2>h2{
+    margin-left: 10%;
+}
+.cartpopup1 {
+    position: absolute;
+    transform: translate(-25%, -25%);
+    top: -50%;
+    left: -90%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 40%;
+    height: auto;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    text-align: center;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+.cartpopup1.active {
+    top: 30%;
+    opacity: 1;
+    transform: translate(250%, -25%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.close_button1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.close_button1+div{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+.close_button1+div>input{
+    padding: 10px;
+    border: 0ch;
+}
+.close_button1+div>img{
+    cursor: pointer;
+
+}
+#navbag3{
+    width: 100%;
+    display: grid;
+    grid-template: auto/repeat(2,auto);
+    justify-content: space-around;
+    gap: 10px;
+}
+#leftnavbag3{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    justify-content: space-around;
+    gap: 10px;
+}
+.leftfirstrow{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    margin-bottom: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 10px;
+}
+.mybagitem{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    line-height: 20px;
+
+}
+.mybagitem>div:first-child>img{
+width: 40%;
+}
+.leftfirstrow>select{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftfirstrow>div:last-child{
+    display: flex;
+    gap: 2px;
+}
+.subbagitemright{
+    width: 100%;
+display: flex;
+gap: 20px;
+text-decoration: underline;
+}
+.subbagitemright>p{
+    cursor: pointer;
+}
+#rightnavbag3{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template: repeat(4,auto);
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+#firstrightarrrow{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #f2f2f2;
+    padding: 0px 10px;
+}
+#firstrightarrrow>img{
+    width: 10%;
+    height: 30px;
+}
+#secondrightarrow{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #f2f2f2;
+}
+#secondrightarrow>div{
+width: 100%;
+display: grid;
+grid-template: auto/repeat(2,auto);
+justify-content: space-around;
+gap: 10px;
+}
+#secondrightarrow>div>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+#secondrightarrow>div>div:nth-child(3){
+    color: red;
+}
+#secondrightarrow>div>div:nth-child(4){
+    color: red;
+}
+#thirdrightarrow{
+    width: 80%;
+display: grid;
+margin: auto;
+gap: 20px;
+}
+#thirdrightarrow>div>a{
+text-decoration: none;
+color: black;
+font-weight: bolder;
+
+
+}
+#thirdrightarrow>div:first-child{
+background-color: #ff3399;
+color: white;
+padding: 10px 20px;
+
+}
+#thirdrightarrow>div:first-child>a{
+    color: white;
+}
+#thirdrightarrow>div:nth-child(2){
+    border: 2px solid;
+    padding: 10px 20px;
+}
+#thirdrightarrow>div:nth-child(2):hover{
+    border-color: #ff3399;
+    color: #ff3399;
+}
+#thirdrightarrow>img{
+    width: 100%;
+}
