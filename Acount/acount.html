@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Heebo&family=IBM+Plex+Sans&family=Nunito:ital@1&family=Oswald:wght@300;600&family=PT+Sans:ital,wght@1,700&family=Roboto+Slab:wght@200&family=Signika+Negative:wght@600&display=swap">
+    <link rel="stylesheet" href="./account.css">
+    <title>Account</title>
+</head>
+<body>
+    
+        <button class="button1"  onclick="showContent1()">
+            <div id="div1" class="icon"><img src="https://i.ibb.co/QrN4xv5/avatar.png"></div>
+            <div id="div2"><h2>My Information</h2></div>
+            <div id="div3" class="arrow"><img src="https://i.ibb.co/znzW1dW/arrow-point-to-right.png"></div>
+        </button>
+        <div id="button1-div">
+            <div class="nameLable">Name<button id="edit">edit</button></div>
+            <input type="text" id="iname" disabled><br>
+            <label>Email</label><br>
+            <input type="email" name="email" id="iEmail" disabled><br>
+            <label>Phone Number</label><br>
+            <input type="number" name="number" id="iPhone" disabled><br>
+            <div class="nameLable">Password<button id="change">chnage</button></div>
+            <input type="password" name="Password" id="iPassword" disabled>
+        </div>
+        <button class="button2"  onclick="showContent2()">
+            <div id="div1" class="icon"><img src="https://i.ibb.co/pZsktKH/trophy.png"></div>
+            <div id="div2"><h2>My Loyalty</h2></div>
+            <div id="div3"class="arrow"><img src="https://i.ibb.co/znzW1dW/arrow-point-to-right.png"></div>
+        </button>
+        <div id="button2-div2">
+            <div><h3>NO loyality Data Available</h3></div>
+        </div>
+        <button class="button3"  onclick="showContent3()">
+            <div id="div1" class="icon"><img src="https://i.ibb.co/ch13RG8/home.png"></div>
+            <div id="div2"><h2>My Addresses</h2></div>
+            <div id="div3"class="arrow"><img src="https://i.ibb.co/znzW1dW/arrow-point-to-right.png"></div>
+        </button>
+        <div id="button3-div3">
+            <img src="./add.png">
+        </div>
+        <button class="button4"  onclick="showContent4()">
+            <div id="div1" class="icon"><img src="https://i.ibb.co/v4LxCHp/credit-card.png"></div>
+            <div id="div2"><h2>My Payment Methods</h2></div>
+            <div id="div3"class="arrow"><img src="https://i.ibb.co/znzW1dW/arrow-point-to-right.png"></div>
+        </button>
+        <div id="button4-div4">
+            <img src="./pay.png">
+        </div>
+    
+<script src="./account.js"></script>   
+</body>
+</html>

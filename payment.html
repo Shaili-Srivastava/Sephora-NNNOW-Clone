@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepphora/place order</title>
+    <link rel="stylesheet" href="./styles/payment.css">
+</head>
+<body>
+    <div id="navbag">
+        <div>
+            <a href="index.html"><img src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png" alt="Sepphora"></a>
+        </div>
+        
+        <div class="dropmenu">
+    <div class="menubar"><p>User</p></div>
+        <div class="seconddrop">
+            <a href="account.html"><img src="https://i.ibb.co/Z2L3KCx/user.png" alt="login">My Account</a>
+            <a href="wishlist.html"><img src="https://i.ibb.co/Hqh4zqT/heart.png" alt="wishlist">Favourites</a>
+            <a href="orders.html"><img  src="https://i.ibb.co/J3Mr8YY/bag.png" alt="cart">My Orders</a>
+            <hr>
+            <a href="index.html"><img src="https://ywcaspokane.org/wp-content/uploads/2016/05/YWCA_Escape_Button.png" alt="sign out">Sign Out</a>          
+        </div>
+        </div></div>
+
+    <div id="navbag2">
+        <h2>CHECKOUT</h2>
+        <div>
+            <div>
+                <h3>1</h3>
+                <h4>Shipping</h4>
+            </div>
+            <div>
+                <h3>2</h3>
+                <h4>Payment</h4>
+            </div>
+        </div>
+    </div>
+    <div id="paynavbag3">
+        <div id="payleftnavbag3">
+            <div>
+                <h3 >TOTAL PAYABLE AMOUNT</h3>
+                <div><h3>Rs.</h3><h3 id="totalpayable"></h3></div>
+                
+            </div>
+            <div>
+                <div><h3>PAYMENT METHODS</h3></div>
+                <hr>
+                <div>
+                    <div><input id="creditcard" type="checkbox"><h4>Credit / Debit card</h4></div>
+                    <div><input id="netbanking" type="checkbox"><h4>Net Banking</h4></div>
+                    <div><input id="paytm" type="checkbox"><h4>Paytm Wallet</h4></div>
+                    <div><input id="wallet" type="checkbox"><h4>Other Wallet</h4></div>
+                    <div><input id="upi" type="checkbox"><h4>UPI</h4></div>
+                    <div><input id="cashondelivery" type="checkbox"><h4>Pay on Delivery(UPI,Wallet,Card and Cash)</h4><p>(additional charge Rs. 40)</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="payrightnavbag3">
+            <div id="paysecondrightarrow">
+                <h2>OVERVIEW</h2>
+                <div>
+                    <div><p>Subtotal</p></div>
+                    <div><p>Rs.</p><p id="bagsubtotal"></p></div>
+                    <div><p>Discount</p></div>
+                    <div><p>-Rs.</p><p id="bagdiscount"></p></div>
+                    <div><p>GST</p></div>
+                    <div><p>Rs.</p><p id="baggst"></p></div>
+                    <div>Delivery Charges</div>
+                    <div><p>Rs.</p><p id="bagdelivery"></p></div>
+                    <div><h3>Total</h3></div>
+                    <div><h3>Rs.</h3><h3 id="bagtotal"></h3></div>
+                </div>
+            </div>
+            <div id="paythirdrightarrow">
+                <h3>PLACE ORDER</h3>
+            </div>
+        </div>
+        </div>
+<div id="paynavbag4">
+    <div>
+        <img src="https://static.nnnow.com/Verified_by_Visa_logo.png" alt="visa">
+        <img src="https://static.nnnow.com/verified-mastercard.png" alt="mastercard">
+        <img src="https://static.nnnow.com/verified-pci.png" alt="pci">
+        <img src="https://static.nnnow.com/AMEX-safekey.png" alt="Safe key">
+    </div>
+    <div>
+        <p>© 2022 NNNOW</p>
+        <p>|</p>
+        <a href="#">Privacy Policy</a>
+        <p>|</p>
+        <a href="#">Terms & Conditions</a>
+    </div>
+</div>
+        <div class="cartpopup1">
+            <h1>Credit / Debit Card</h1>
+            <div class="close_button1">&times;</div>
+            <div>
+            <input type="number" id="cardnumber" placeholder="Enter your 16 digit cardnumber" required minlength="16" maxlength="16">
+            <input type="text" placeholder="Enter card holder name" required maxlength="16">
+            <input id="cvv" type="number" placeholder="Enter card CVV" required minlength="3" maxlength="3">
+            <input id="cardexpiry" type="month" required min="2022/JULY" >
+            <button id="payplaceorder">PLACE ORDER</button>
+            </div>
+        </div>
+        <div class="cartpopup2">
+            <h1>OTP Verification</h1>
+            <div class="close_button2">&times;</div>
+            <div>
+            <label for="">Please enter otp sent to your registered Mobile Number +91XXXXXXXX31</label>
+            <input type="password" id="myotp" placeholder="Enter OTP" required maxlength="4">
+            <button id="confirmotp">Submit OTP</button>
+            </div>
+        </div>
+</body>
+</html>
+<script src="./scripts/payment.js"></script>

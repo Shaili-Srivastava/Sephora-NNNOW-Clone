@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    body{
+        margin-left: 20%;
+    }
+    
+    .button1,.button2,.button3,.button4{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+        width: 80%;
+        height: 100px;
+        border: none;
+        font-family: 'Open Sans', sans-serif;
+    }
+    h3{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+    }
+    .button1{
+        margin-top: 40px;
+        background-color: #2ba2e4;
+        
+    }
+    .button2{
+        background-color: #33dece;
+    }
+    .button3{
+        background-color: #36f7a7;
+    }
+    .button4{
+        background-color: #fab531;
+    }
+    #button1-div,#button2-div2, #button3-div3, #button4-div4{
+        display: none
+        ;
+        width: 50%;
+        height: auto;
+        text-align: center;
+        /* background-color: lightblue; */
+        /* margin-top: 20px; */
+        text-align: left;
+        margin-left: 40px;
+        /* align-items:baseline; */
+        font-size: 14px;
+
+    }
+    a{
+        text-decoration: none;color: red;
+        margin-left: 80px;
+    }
+    #edit,#change{
+        background: transparent;
+        border: none;
+        color: red;
+        float: right;
+        font-size: 14px;
+
+    }
+    input{
+        width: 350px;
+        background-color: aliceblue;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .nameLable{
+        width: 350px;
+        display: block;
+        text-align: left;
+    }
+    #div1{
+        width: 10%;
+    }
+    .icon>img{
+        height: 30px;
+        width: 30px;
+    }
+    .arrow>img{
+        height: 15px;
+        width: 15px;
+    }
+    #div2{
+        width: 80%;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 700;
+        
+    }
+    #div3{
+        width: 10%;
+    }
+    #button4-div4>img{
+        margin-left: 250px;
+    }
+    #button3-div3>img{
+        height: 400px;
+        width: 400px;
+        margin-left: 250px;
+    }
