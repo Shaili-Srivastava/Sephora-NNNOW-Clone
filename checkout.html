@@ -62,12 +62,29 @@
 }
 #navbag2{
     width: 100%;
+    display: flex;
+    gap: 30%;
     background-color: #0092df;
     padding: 10px 0px;
     color: white;
 }
+#navbag2>div{
+    display: flex;
+    gap: 20px;
+}
+#navbag2>div>div{
+    display: flex;
+    gap: 10px;
+    border-bottom: 3px solid #ff3399;
+}
 #navbag2>h2{
     margin-left: 10%;
+}
+#navbag2>div>div>h3{
+border-radius: 50%;
+background-color: #ff3399;
+padding: 2.5px 8px;
+cursor: pointer;
 }
 .cartpopup1 {
     position: absolute;
@@ -286,7 +303,17 @@ color: white;
         </div></div>
 
     <div id="navbag2">
-        <h2 id="totalbagcount"></h2>
+        <h2>CHECKOUT</h2>
+        <div>
+            <div>
+                <h3>1</h3>
+                <h4>Shipping</h4>
+            </div>
+            <div>
+                <h3>2</h3>
+                <h4>Payment</h4>
+            </div>
+        </div>
     </div>
     <div id="navbag3">
         <div id="leftnavbag3">
@@ -312,9 +339,7 @@ color: white;
                 </div>
             </div>
             <div id="thirdrightarrow">
-                <a id="checkoutdata" href="checkout.html">CHECKOUT</a>
-                <a href="index.html">SHOP MORE</a>
-                <img src="https://static.nnnow.com/mybag_offer_banner.jpg" alt="yono sbi">
+                <a href="payment.html">CONTINUE</a>
             </div>
         </div>
         </div>
@@ -359,21 +384,6 @@ color: white;
         "Size": "20ML",
         "Rating": "5",
         "id": 1
-      }, {
-        "Product": "MAKEUP",
-        "Section": "FACE",
-        "Sub_Section": "BB & CC Cream",
-        "Image_1": "https://cdn09.nnnow.com/web-images/large/styles/DJA1WA697WV/1585307687501/1.jpg",
-        "Image_2": "https://cdn16.nnnow.com/web-images/large/styles/DJA1WA697WV/1616758676356/50.jpg",
-        "Image_3": "",
-        "Name": "CLINIQUE",
-        "Description": "Clinique ID™ With Dramatically Different™ Moisturizing BB-Gel",
-        "Price": "2950",
-        "Offer_Price": "",
-        "Offer": "",
-        "Size": "115ML",
-        "Rating": "",
-        "id": 7
       }]
     // let bagdata=JSON.parse(localStorage.getItem("bagdata"))||[];
     let myfavdata=JSON.parse(localStorage.getItem("myfavdata"))||[];
@@ -395,89 +405,29 @@ color: white;
         section.innerText=el.Sub_Section;
         let size=document.createElement("p");
         size.innerText=el.Size;
-        let movefav=document.createElement("p");
-        movefav.innerText="Move to Favourite";
-        movefav.addEventListener("click", ()=>{
-            myfavdata.push(el);
-            localStorage.setItem("myfavdata", JSON.stringify(myfavdata));
-            bagdata.splice(index,1);
-            localStorage.setItem("bagdata",JSON.stringify(bagdata));
-        })
-        itemremove=document.createElement("p");
-        itemremove.innerText="Remove";
-        itemremove.addEventListener("click", ()=>{
-            bagdata.splice(index,1);
-            localStorage.setItem("bagdata",JSON.stringify(bagdata));
-        })
-        let subbagitemright=document.createElement("div");
-        subbagitemright.setAttribute("class","subbagitemright");
-        subbagitemright.append(movefav,itemremove)
-        mybagitemright.append(name,section,size,subbagitemright);
-        
-        mybagitem.append(mybagitemleft,mybagitemright);
-        let qty=document.createElement("select");
-        let opt1=document.createElement("option");
-        opt1.value=1;
-        opt1.innerText=1;
-        let opt2=document.createElement("option");
-        opt2.value=2;
-        opt2.innerText=2;
-        let opt3=document.createElement("option");
-        opt3.value=3;
-        opt3.innerText=3;
-        let opt4=document.createElement("option");
-        opt4.value=4;
-        opt4.innerText=4;
-        qty.append(opt1,opt2,opt3,opt4);
-
         
         let itemprice=document.createElement("div");
         let pricetag=document.createElement("h2");
         pricetag.innerText="Rs."
         let price=document.createElement("h2");
-        let updatedprice=el.Offer_Price;
-        if(el.Offer_Price==""){
-            updatedprice=el.Price;
-            price.innerText=updatedprice;
-        }
-        else{
-            let updatedprice=el.Offer_Price;
-            price.innerText=updatedprice;
-        }
-        
+        price.innerText=el.Offer_Price
         itemprice.append(pricetag,price);
-       
-        qty.addEventListener("change",()=>{
-            if(el.Offer_Price==""){
-                updatedprice=eval(el.Price*qty.value);
-                price.innerText=updatedprice
-        }
-        else{
-            updatedprice=eval(el.Offer_Price*qty.value);
-            price.innerText=updatedprice;
-        }
-        });
-        totalbagprice+=Number(updatedprice);
+        totalbagprice+=Number(price.innerText);
 
-        leftfirstrow.append(mybagitem,qty,itemprice);
-        leftnavbag3.append(leftfirstrow);
-        let checkoutdata=document.querySelector("#checkoutdata");
-        checkoutdata.addEventListener("click", ()=>{
-            event.preventDefault();
-            let obj={
-                Name:el.Name,
-                Sub_Section:el.Sub_Section,
-                Size:el.Size,
-                Price:updatedprice,
-                Qty:qty.value
-
-            };
-            
-            console.log(obj);
-        });
-
+        mybagitemright.append(name,section,size,itemprice);
+        
+        mybagitem.append(mybagitemleft,mybagitemright);
+        let deliverytime=document.createElement("div");
+        let check1=document.createElement("input");
+        check1.type="checkbox";
+        let para1=document.createElement("h5");
+        para1.innerText="Delivery within 5-7 days";
+        deliverytime.append(check1, para1);
 
         
+        
+        leftfirstrow.append(mybagitem,deliverytime);
+        leftnavbag3.append(leftfirstrow);
     });
     let promocode=document.querySelector("#firstrightarrrow");
     promocode.addEventListener("click", function(){
@@ -487,7 +437,7 @@ color: white;
     document.querySelector(".close_button1").addEventListener("click", function () {
     document.querySelector(".cartpopup1").classList.remove("active");
 });
-let bagsubtotal=document.querySelector("#bagsubtotal").innerText+=totalbagprice;
+let bagsubtotal=document.querySelector("#bagsubtotal").innerText=totalbagprice;
 let bagdelivery=document.querySelector("#bagdelivery");
 bagdelivery.innerText=(Math.random()*100).toFixed(0);
 let submitpromo=document.querySelector("#submitpromo");
@@ -509,6 +459,4 @@ let baggst=document.querySelector("#baggst");
 baggst.innerText=eval((bagsubtotal-bagdiscount.innerText)*.18).toFixed(2);
 let bagtotal=document.querySelector("#bagtotal");
 bagtotal.innerText=eval(bagsubtotal-Number(bagdiscount.innerText)+Number(bagdelivery.innerText)+Number(baggst.innerText)).toFixed(2);
-let totalbagcount=document.querySelector("#totalbagcount");
-totalbagcount.innerText=`MY BAG (${bagdata.length})`;
 </script>

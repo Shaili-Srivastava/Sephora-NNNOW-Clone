@@ -1,5 +1,4 @@
-let data={
-    "MAKEUP": [
+let data=[
       {
         "Product": "MAKEUP",
         "Section": "FACE",
@@ -1071,9 +1070,7 @@ let data={
         "Size": "14ML",
         "Rating": "",
         "id": 67
-      }
-    ],
-    "SKINCARE": [
+      },
       {
         "Product": "SKINCARE",
         "Section": "MOISTURIZERS",
@@ -2273,9 +2270,7 @@ let data={
         "Size": "200 pieces",
         "Rating": "",
         "id": 75
-      }
-    ],
-    "FRAGRANCE": [
+      },
       {
         "Product": "FRAGRANCE",
         "Section": "WOMEN",
@@ -2659,9 +2654,7 @@ let data={
         "Size": "75gm",
         "Rating": "",
         "id": 24
-      }
-    ],
-    "HAIRCARE": [
+      },
       {
         "Product": "HAIRCARE",
         "Section": "SHAMPOO & CONDITIONER",
@@ -2853,9 +2846,7 @@ let data={
         "Size": "200ML",
         "Rating": "",
         "id": 12
-      }
-    ],
-    "TOOLS_&_BRUSHES": [
+      },
         {
           "Product": "TOOLS & BRUSHES",
           "Section": "BRUSHES",
@@ -3432,5 +3423,10 @@ let data={
           "Rating": "",
           "id": 36
         }
-    ]
-  }
+]
+
+
+let SephoraMainData1=JSON.parse(localStorage.getItem("SephoraMainData"))||[];
+    localStorage.setItem("SephoraMainData",JSON.stringify(data));
+ 
+ 
