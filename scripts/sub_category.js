@@ -1,82 +1,65 @@
 import {display} from '../component/main.js';
+import { navbar } from "../scripts/navbar.js"
+
+let nav = document.querySelector("#navbar");
+nav.innerHTML = navbar();
 
 let data = [{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL1",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 2755
+    Image_1 :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL1",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 2755
 },
 {
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL1",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3055
+    Image_1 :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL1",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 3055
 },
 {
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL2",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 755
+    Image_1:"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL2",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 755
 },
 {
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL2",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 1755
+    Image_1:"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL2",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 1755
 },
 {
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3700
+    Image_1:"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 3700
 },
 {
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 2999
+    Image_1:"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 2999
 },
 {
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3755
+    Image_1:"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 3755
 },
 {
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3755
+    Image_1:"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 3755
 },
 {
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3755
+    Image_1:"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
+    Name:"FOREST ESSENTIAL",
+    Description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
+    Price: 3755
 },]
 
 
-// function append_data(){
-//     product_div.innerHTML = ""
-//     data.forEach((el) => {
-//         let div = document.createElement("div")
-//         div.setAttribute ("id", "detailed_pro")
-//         let image = document.createElement("image");
-//         image.src= el.image
-//         let name = document.createElement("h4");
-//         name.innerText= el.name
-//         let description = document.createElement("p")
-//         description.innerText= el.description
-//         let price = document.createElement("h4")
-//         price.innerText= `Rs. ${el.price}`
-
-//        div.append(image,name,description,price)
-       
-//        product_div.append(div)
-
-//     });
-// }
-// // append_data(data);
 
 let container = document.getElementById("product_div")
 display(data, container)
@@ -90,7 +73,7 @@ document.getElementById("c1").addEventListener("click",()=>{
     console.log("working")
     if(c1.checked==true){
         data = data.filter((el)=>{
-            return el.name== "FOREST ESSENTIAL1";
+            return el.Name== "FOREST ESSENTIAL1";
         })
         console.log(data);
         append_data(data);
@@ -101,7 +84,7 @@ document.getElementById("filtertagPrice").addEventListener("click",()=>{
     console.log(value);
         if(value=="zero"){
         let cdata = data.filter((el)=>{
-            return el.price > 0 && el.price <= 1000;
+            return el.Price > 0 && el.Price <= 1000;
       })
         // console.log(data, container);
         display(cdata, container)
@@ -109,21 +92,21 @@ document.getElementById("filtertagPrice").addEventListener("click",()=>{
     }
     if(value=="thousand"){
       let  cdata= data.filter((el) =>{
-            return el.price >1000 && el.price <=2000
+            return el.Price >1000 && el.Price <=2000
         })
         display(cdata, container)
 
     }
     if(value=="two_thous"){
         let cdata= data.filter((el) =>{
-            return el.price >=2000
+            return el.Price >=2000
         })
         display(cdata, container)
 
     }
-    if(value=="price"){
+    if(value=="Price"){
         let cdata= data.filter((el) =>{
-            return el.price >=0
+            return el.Price >=0
         })
         console.log(data)
         display(cdata, container)
@@ -135,16 +118,21 @@ function sorting() {
     let toSort = document.getElementById("select").value;
     if (toSort == "LH") {
         let sortedList = data.sort((a, b) => { 
-            return a.price - b.price 
+            return a.Price - b.Price 
         } );
         console.log(sortedList);
        display(sortedList, container)
         console.log("high to low");
     }
     if (toSort == "HL") {
-        let sortedList= data.sort((a, b) => b.price - a.price);
+        let sortedList= data.sort((a, b) => b.Price - a.Price);
        display(sortedList, container)
 
         console.log("low to high")
     }
     }
+
+    import { footer } from "../scripts/navbar.js"
+
+let foot = document.querySelector("#footer");
+foot.innerHTML = footer();

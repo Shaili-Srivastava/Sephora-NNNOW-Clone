@@ -23,7 +23,7 @@
  .hiddenDiv {
      width: 86%;
      margin: auto;
-     background-color: green;
+     background-color: rgb(60, 218, 218);
      display: flex;
      justify-content: center;
      align-items: center;

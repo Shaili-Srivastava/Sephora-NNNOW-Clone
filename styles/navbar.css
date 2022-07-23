@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: ave;
 }
+
 #navbar{
     width: 100%;
     margin-bottom: 10px;
@@ -226,6 +227,9 @@ gap: 5px;
     justify-content: space-around;
     gap: 20px;
     background-color: white;
+}
+.dropmenu a,p:hover{
+    color: hotpink;
 }
 .dropmenu:hover:hover .menubar{
     width: 100%;
