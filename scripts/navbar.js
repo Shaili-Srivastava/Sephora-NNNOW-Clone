@@ -510,18 +510,6 @@ let cartpopUp = () => {
     });
 }
 
-// let searchfun = document.getElementById('searchbar');
-// searchfun.addEventListener("keydown", function (event) {
-//     let input = document.getElementById('searchbar').value;
-//     input = input.toLowerCase();
-//     let temp = JSON.parse(localStorage.getItem("MainData"));
-//     let filtered_list = temp.filter(function (elem) {
-//         return (elem.name).toLowerCase().includes(input);
-//     });
-//     imgTitleData = ["", ""];
-//     localStorage.setItem("img_and_title", JSON.stringify(imgTitleData));
-//     localStorage.setItem("filtered_data", JSON.stringify(filtered_list));
-//     display(filtered_list, imgTitleData);
-// })
+
 export { navbar, footer, cartpopUp }
 
