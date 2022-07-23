@@ -1,20 +1,22 @@
  body {
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     font-family: Arial, Helvetica, sans-serif;
+     /* font-family: Arial, Helvetica, sans-serif; */
      word-spacing: 0.5px;
  }
 
  #main {
+
      width: 80%;
      margin: auto;
-     border: 1px solid red;
+     margin-top: 50px;
+     /* border: 1px solid red; */
  }
 
  #productDetail {
      display: flex;
      margin: 5px;
      padding: 20px;
-     border: 3px solid green;
+     /* border: 3px solid green; */
      gap: 60px;
  }
 
@@ -25,7 +27,7 @@
      display: flex;
      flex-direction: column;
      justify-content: center;
-     border: 1px solid black;
+     /* border: 1px solid black; */
  }
 
  #sidePanelImage>img {
@@ -36,7 +38,7 @@
      width: 40%;
      height: fit-content;
      padding: 20px;
-     border: 1px solid violet;
+     /* border: 1px solid violet; */
  }
 
  #middleImage>img {
@@ -46,13 +48,13 @@
  #rightPanelDetail {
      width: 40%;
      padding: 10px;
-     border: 1px solid red;
+     /* border: 1px solid red; */
  }
 
  #rightPanelDetail p,
  h4 {
      font-size: 16px;
-     line-height: 15px;
+     line-height: 25px;
  }
 
  #ratingBlock {
@@ -62,7 +64,7 @@
      align-items: center;
      width: 100%;
      padding: 0;
-     margin: -20px 0px;
+     margin: 0px 0px;
  }
 
  #ratingBlock>p {
@@ -80,7 +82,7 @@
      align-items: center;
      width: 100%;
      padding: 0;
-     margin: -20px 0px;
+     margin: 0px 0px;
  }
 
  #priceBlock>p:last-child {
@@ -116,6 +118,7 @@
      gap: 10px;
      justify-content: start;
      align-items: flex-start;
+     padding: 15px;
  }
 
  #cautionDiv>img {
@@ -125,7 +128,7 @@
  }
 
  #cautionDiv>div p {
-     line-height: 18px;
+     line-height: 25px;
  }
 
  #addToBag {
@@ -164,7 +167,7 @@
  #shareAndFav>div p {
      font-size: 10px;
      font-weight: 700;
-     line-height: 10px;
+     line-height: 20px;
  }
 
  #shareAndFav>div {
@@ -177,6 +180,7 @@
  #pincode {
      width: 100%;
      display: flex;
+     margin-top: 10px;
      border: 1px solid red;
      gap: 10px;
  }
@@ -202,11 +206,9 @@
      height: 400px;
      /* border: 2px solid red; */
      justify-content: center;
-     margin: 20px 0;
+     margin: 100px 0;
      position: relative;
      opacity: 0.9;
-
-
  }
 
  #bottomDetail>img {
@@ -240,7 +242,7 @@
      height: 100px;
      position: absolute;
      left: 200px;
-     top: 135px;
+     top: 115px;
      z-index: 1;
      overflow-y: auto;
      margin: auto;
@@ -266,7 +268,7 @@
      height: 100px;
      position: absolute;
      left: 200px;
-     top: 135px;
+     top: 115px;
      z-index: 0;
      overflow-y: auto;
      margin: auto;
@@ -281,7 +283,7 @@
      height: 100px;
      position: absolute;
      left: 200px;
-     top: 135px;
+     top: 115px;
      z-index: 0;
      overflow-y: auto;
      margin: auto;

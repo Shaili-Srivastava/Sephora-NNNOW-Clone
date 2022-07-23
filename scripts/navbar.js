@@ -1,5 +1,5 @@
-let navbar= ()=>{
-    return ` <div id="navtop1">
+let navbar = () => {
+    return `<div id="navtop1">
     <div id="navtop">
     <div>
         <div><a href="https://www.nnnow.com/"><img src="https://cdn02.nnnow.com/web-images/master/navtree_metaData/59b2425ae4b0d70964ee66e0/1505806763887/12NNNOWLOGODESKTOP.png" alt="Logo Error"></a></div>
@@ -46,7 +46,7 @@ let navbar= ()=>{
 <div id="midnav">
     <div>
         <img src="https://2.bp.blogspot.com/-QLIEG23imMI/XkV80ER9UAI/AAAAAAAACPI/Qx6esAa5KI02zsrjUvBERVbsNIKrNR2NQCLcBGAsYHQ/s1600/Search%2Bicon.png" alt="search">
-        <input type="text" id="searchquery" placeholder="Search SEPHORA"></div>
+        <input type="text" onkeydown="search()" id="searchBar" placeholder="Search SEPHORA"></div>
     <div id="homelogo"><a href="index.html"><img src="https://cdn07.nnnow.com/web-images/master/navtree_metaData/59b2657be4b0e6b6e16a9180/1548053082431/se.png" alt="Sephora"></a></div>
     <div>
         <div><a href="wishlist.html"><img src="https://i.ibb.co/Hqh4zqT/heart.png" alt="wishlist"></a></div>
@@ -84,12 +84,12 @@ let navbar= ()=>{
 <div id="bottomnav">
     <div><a href="sale.html">SALE</a></div>
     <div class="dropmenu">
-    <div class="menubar"><a href="makeup.html">MAKEUP</a></div>
+    <div class="menubar"><a href="makeupCat.html">MAKEUP</a></div>
     <div class="firstdrop">
         <div class="seconddrop">
-            <a href="face.html">FACE</a>
-            <a href="foundation.html">Foundation</a>
-            <a href="cccream.html">BB & CC Cream</a>
+            <p onclick="Face()">FACE</p>
+            <p onclick="Foundation()">Foundation</p>
+            <p onclick="BBCCCream()">BB & CC Cream</p>
             <a href="concealer.html">Concealer</a>
             <a href="faceprimer.html">Face Primer</a>
             <a href="highlighter.html">Highlighter</a>
@@ -97,9 +97,9 @@ let navbar= ()=>{
             <a href="makeuppalette.html">Makeup Palette</a>
         </div>
         <div class="seconddrop">
-            <a href="eye.html">EYE</a>
-            <a href="eyepalettes.html">Eye Palettes</a>
-            <a href="mascara.html">Mascara</a>
+            <p onclick="EYE()">EYE</p>
+            <p onclick="EyePalettes()">Eye Palettes</p>
+            <p onclick="Mascara()">Mascara</p>
             <a href="eyeliner.html">Eyeliner</a>
             <a href="eyebrow.html">Eyebrow</a>
             <a href="eyeshadow.html">Eyeshadow</a>
@@ -108,70 +108,70 @@ let navbar= ()=>{
             <a href="contactlens.html">Contact Lenses</a>
         </div>
         <div class="seconddrop">
-            <a href="lip.html">LIP</a>
-            <a href="lipstick.html">Lipstick</a>
-            <a href="lipstain.html">Lip stain</a>
+            <p onclick="LIP()">LIP</p>
+            <p onclick="Lipstick()">Lipstick</p>
+            <p onclick="LipStain()">Lip stain</p>
             <a href="lipgloss.html">Lip Gloss</a>
             <a href="lipliner.html">Lip Liner</a>
             <a href="lipbalm.html">Lip Balm & Treatment</a>
             <a href="lipbrush.html">Lip Brushes</a>
         </div>
         <div class="seconddrop">
-            <a href="cheek.html">CHEEK</a>
-            <a href="blush.html">Blush</a>
-            <a href="bronzer.html">Bronzer</a>
+            <p onclick="CHEEK()">CHEEK</p>
+            <p onclick="Blush()">Blush</p>
+            <p onclick="Bronzer()">Bronzer</p>
             <a href="highlighter.html">Highlighter</a>
             <a href="faceoils.html">Face Oils</a>
        </div>
        <div class="seconddrop">
-        <a href="nailmakeup.html">NAIL MAKEUP</a>
-        <a href="nailpolish.html">Nail Polish</a>
-        <a href="nailcare.html">Nail Care</a>
+        <p onclick="NAILMAKEUP()">NAIL MAKEUP</p>
+        <p onclick="NailPolish()">Nail Polish</p>
+        <p onclick="NailCare()">Nail Care</p>
         <a href="manicure.html">Manicure & Pedicure Tools</a>
    </div>
    <div class="seconddrop">
-    <a href="makeupaccessorie.html">MAKEUP ACCESSORIES</a>
-    <a href="tweezers.html">Tweezers & Eyebrow Tools</a>
-    <a href="makeupremover.html">Makeup Remover</a>
+    <p onclick"MAKEUPACCESSORIES()">MAKEUP ACCESSORIES</p>
+    <p onclick="TweezersEyebrowTools()">Tweezers & Eyebrow Tools</p>
+    <p onclick="MakeupRemovers()">Makeup Remover</p>
     <a href="sponges.html">Sponges & Applicators</a>
     <a href="makeupbag.html">Makeup Bags & Travel Cases</a>
 </div>
 <div class="seconddrop">
-<a href="vegan.html">VEGAN</a>
-<a href="veganeye.html">Eye</a>
+<p onclick="VEGAN()">VEGAN</p>
+<p onclick="Eye()">Eye</p>
 <a href="veganface.html">Face</a>
 </div>
 
     </div></div>
     <div class="dropmenu">
-        <div class="menubar"><a href="skincare.html">SKINCARE</a></div>
+        <div class="menubar"><a href="skincareCat.html">SKINCARE</a></div>
         <div class="firstdrop">
             <div class="seconddrop">
-                <a href="MOISTURIZERS.html">MOISTURIZERS</a>
-                <a href="Moisturizers.html">Moisturizers</a>
-                <a href="nightcreams.html">Night Creams</a>
+                <p onclick="MOISTURIZERS()">MOISTURIZERS</p>
+                <p onclick="Moisturizers()">Moisturizers</p>
+                <p onclick="NightCreams()">Night Creams</p>
                 <a href="mist.html">Mists & Essences</a>
                 <a href="cccream.html">BB & CC Creams</a>
             </div>
             <div class="seconddrop">
-                <a href="CLEANSERS.html">CLEANSERS</a>
-                <a href="facewash.html">Face Wash & Cleansers</a>
-                <a href="makeupremover.html">Makeup Removers</a>
+                <p onclick="CLEANSERS()">CLEANSERS</p>
+                <p onclick="FaceWashCleansers()">Face Wash & Cleansers</p>
+                <a href="makeupremover.html">Makeup Removers</p>
                 <a href="facewipes.html">Face Wipes</a>
                 <a href="toners.html">Toners</a>
                 <a href="sanitizers.html">Hand Sanitizers</a>
                
             </div>
             <div class="seconddrop">
-                <a href="treatment.html">TREATMENTS & HIGH TECH TOOLS</a>
-                <a href="faceserums.html">Face Serums</a>
-                <a href="cleansing.html">Cleansing Tools</a>
+                <p onclick="TREATMENTS()">TREATMENTS & HIGH TECH TOOLS</p>
+                <p onclick="FaceSerums()">Face Serums</p>
+                <p onclick="CleansingTools()">Cleansing Tools</p>
                 <a href="eyecream.html">Eye Creams & Treatments</a>
             </div>
             <div class="seconddrop">
-                <a href="MASKS.html">MASKS</a>
-                <a href="facemask.html">Face Masks</a>
-                <a href="sheetmask.html">Sheet Masks</a>
+                <p onclick="MASKS()">MASKS</p>
+                <p onclick="FaceMasks()">Face Masks</p>
+                <p onclick="SheetMasks()">Sheet Masks</p>
                 <a href="eyemask.html">Eye Masks</a>
                 <a href="nosemask.html">Nose Masks & Strips</a>
                 <a href="lipmask.html">Lip Masks</a>
@@ -180,36 +180,36 @@ let navbar= ()=>{
                 <a href="footmask.html">Foot Masks</a>
            </div>
            <div class="seconddrop">
-            <a href="bath.html">BATH & SHOWER</a>
-            <a href="bodywash.html">Body Wash and Shower Gel</a>
-            <a href="scrub.html">Scrub and Exfoliants</a>
+            <p onclick="BATHSHOWER()">BATH & SHOWER</p>
+            <p onclick="BodyWashandShowerGel()">Body Wash and Shower Gel</p>
+            <p onclick="ScrubandExfoliants()">Scrub and Exfoliants</p>
             <a href="exfoliators.html">Exfoliators</a>
        </div>
        <div class="seconddrop">
-        <a href="BODYMOISTURIZERS.html">BODY MOISTURIZERS</a>
-        <a href="bodylotion.html">Body Lotions & Body Oils</a>
-        <a href="handcream.html">Hand Cream & Foot Cream</a>
+        <p onclick="BODYMOISTURIZERS()">BODY MOISTURIZERS</p>
+        <p onclick="BodyLotionsBodyOils()">Body Lotions & Body Oils</p>
+        <p onclick="HandCreamFootCream()">Hand Cream & Foot Cream</p>
         
    </div>
    <div class="seconddrop">
-    <a href="veganskin.html">VEGAN</a>
-    <a href="veganfacecare.html">Face Care</a>
+    <p onclick="VEGAN()">VEGAN</p>
+    <p onclick="FaceCare()">Face Care</p>
 </div>
 
         </div></div>
 
     <div class="dropmenu">
-        <div class="menubar"><a href="fragrance.html">FRAGRANCE</a></div>
+        <div class="menubar"><a href="fragranceCat.html">FRAGRANCE</a></div>
         <div class="firstdrop">
             <div class="seconddrop">
-                <a href="women.html">WOMEN</a>
-                <a href="perfume.html">Perfume</a>
-                <a href="deo.html">Mists and Deodorants</a>
+                <p onclick="WOMEN()">WOMEN</p>
+                <p onclick="Perfume()">Perfume</p>
+                <p onclick="MistsandDeodorants()">Mists and Deodorants</p>
             </div>
             <div class="seconddrop">
-                <a href="men.html">MEN</a>
-                <a href="menperfume.html">Perfume</a>
-                <a href="bodyspray.html">Body Sprays & Deodorant</a>
+                <p onclick="MEN()">MEN</p>
+                <p onclick="Perfume()">Perfume</p>
+                <p onclick="BodySpraysDeodorant()">Body Sprays & Deodorant</p>
                 
             </div>
         </div></div>
@@ -218,12 +218,12 @@ let navbar= ()=>{
       <div class="menubar"><a href="haircare.html">HAIRCARE</a></div>
       <div class="firstdrop">
       <div class="seconddrop">
-           <a href="shampooconditiner.html">SHAMPOO & CONDITIONER</a>
-           <a href="shampoo.html">Shampoo</a>
-           <a href="conditioner.html">Conditioner</a>
+           <p onclick="SHAMPOOCONDITIONER()">SHAMPOO & CONDITIONER</p>
+           <p onclick="Shampoo()">Shampoo</p>
+           <p onclick="Conditioner()">Conditioner</p>
              </div>
          <div class="seconddrop">
-            <a href="fairstyling.html">HAIR STYLING & TREATMENTS</a>
+            <p onclick="TREATMENTS()">HAIR STYLING & TREATMENTS</p>
             <a href="hairspray.html">Hair Spray & Styling Products</a>
             <a href="hairoil.html">Hair Oil</a>
             <a href="hairmask.html">Hair Masks</a>
@@ -232,19 +232,19 @@ let navbar= ()=>{
                 </div>
             </div></div>
     <div class="dropmenu">
-                <div class="menubar"><a href="toolbrush.html">TOOLS & BRUSHES</a></div>
+                <div class="menubar"><a href="tool_n_brushes.html">TOOLS & BRUSHES</a></div>
                 <div class="firstdrop">
             <div class="seconddrop">
-                     <a href="brushes.html">BRUSHES</a>
-                     <a href="facebrush.html">Face Brushes</a>
-                     <a href="eyebrush.html">Eye Brushes</a>
+                     <p onclick="BRUSHES()">BRUSHES</p>
+                     <p onclick="FaceBrushes()">Face Brushes</p>
+                     <p onclick="EyeBrushes()">Eye Brushes</p>
                      <a href="lipbrush.html">Lip Brushes</a>
               </div>
          <div class="seconddrop">
-                      <a href="tools.html">TOOLS</a>
-                      <a href="sponge.html">Sponges & Applicators</a>
-                      <a href="facetools.html">Face Tools</a>
-                      <a href="hairclips.html">Hair Clips</a>
+                      <p onclick="TOOLS()">TOOLS</p>
+                      <p onclick="SpongesApplicators()">Sponges & Applicators</p>
+                      <p onclick="FaceTools()">Face Tools</p>
+                      <p href="hairclips.html">Hair Clips</p>
                       <a href="sharpeners.html">Sharpeners</a>
                       <a href="tweezers.html">Tweezers & Eyebrow Tools</a>
                       <a href="eyelash.html">Eyelash Curlers</a>
@@ -334,7 +334,7 @@ let navbar= ()=>{
     
 </div>`;
 }
-let footer= ()=>{
+let footer = () => {
     return ` <a id="backtop" href="#"><div id="topbutton"><h1>^</h1><h4>BACK TO TOP</h4></div></a>
         
     <div id="footer1">
@@ -491,4 +491,25 @@ let footer= ()=>{
 </div>`;
 }
 
-export {navbar, footer}
+
+let cartpopUp = () => {
+    let mycart = document.querySelector("#mycart");
+    mycart.addEventListener("click", function () {
+        if (bagcount.innerText == "0") {
+            document.querySelector(".cartpopup1").classList.add("active");
+        }
+        else {
+            document.querySelector(".cartpopup2").classList.add("active");
+        }
+    })
+    document.querySelector(".close_button1").addEventListener("click", function () {
+        document.querySelector(".cartpopup1").classList.remove("active");
+    });
+    document.querySelector(".close_button2").addEventListener("click", function () {
+        document.querySelector(".cartpopup2").classList.remove("active");
+    });
+}
+
+
+export { navbar, footer, cartpopUp }
+

@@ -21,13 +21,13 @@
 
  #sidebar {
      width: 25%;
-     border: 2px solid black;
+     /* border: 2px solid black; */
      margin: 5px;
  }
 
  #productsList {
      width: 75%;
-     border: 2px solid black;
+     /* border: 2px solid black; */
      margin: 5px;
  }
 
@@ -37,7 +37,7 @@
  }
 
  .list_heading {
-     border: 1px solid blue;
+     /* border: 1px solid blue; */
      background-color: #f3f3f3;
      margin: 2px;
      display: flex;
@@ -134,6 +134,26 @@
      justify-content: flex-start;
      gap: 10px;
      overflow-x: auto;
+ }
+
+ #list_container_1::-webkit-scrollbar {
+     width: 0;
+     height: 0;
+ }
+
+ #list_container_2::-webkit-scrollbar {
+     width: 0;
+     height: 0;
+ }
+
+ #list_container_3::-webkit-scrollbar {
+     width: 0;
+     height: 0;
+ }
+
+ #list_container_4::-webkit-scrollbar {
+     width: 0;
+     height: 0;
  }
 
 
