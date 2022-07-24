@@ -1,7 +1,7 @@
 import { displyFrameWork, display } from "../component/main.js";
 import { navbar,cartpopUp, loginpopup } from "../scripts/navbar.js"
-cartpopUp();
-loginpopup();
+// cartpopUp();
+// loginpopup();
 let nav = document.querySelector("#navbar");
 nav.innerHTML = navbar();
 
