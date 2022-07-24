@@ -3423,7 +3423,7 @@ let data=[
           "Rating": "",
           "id": 36
         }
-<<<<<<< HEAD:Data Collection/data.js
+
 ]
 
 

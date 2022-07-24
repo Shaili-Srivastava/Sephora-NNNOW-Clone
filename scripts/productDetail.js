@@ -1,53 +1,24 @@
+import { navbar, footer } from "../scripts/navbar.js"
 
-let data1 = [{
-    Product: "MAKEUP",
-    Section: "FACE",
-    Sub_Section: "Foundation",
-    Image_1: "https://cdn16.nnnow.com/web-images/large/styles/CH65NKWC2ZU/1533201155002/1.jpg",
-    Image_2: "https://cdn16.nnnow.com/web-images/large/styles/CH65NKWC2ZU/1617175589724/2.jpg",
-    Image_3: "",
-    Name: "SEPHORA COLLECTION",
-    Description: "Glow Perfection Foundation - 25 Beige",
-    Price: 1690,
-    Offer_Price: 1352,
-    Offer: 20,
-    Size: "20ML",
-    Rating: "5",
-    id: 1
-},
-{
-    Product: "SKINCARE",
-    Section: "MOISTURIZERS",
-    Sub_Section: "Moisturizer",
-    Image_1: "https://cdn11.nnnow.com/web-images/large/styles/7I89U5NMD9A/1605083609928/1.jpg",
-    Image_2: "https://cdn04.nnnow.com/web-images/large/styles/7I89U5NMD9A/1605083609924/2.jpg",
-    Image_3: "https://cdn09.nnnow.com/web-images/large/styles/7I89U5NMD9A/1605083609926/3.jpg",
-    Name: "ELIZABETH ARDEN",
-    Description: "Ceramide Lift And Firm Day Cream SPF 30",
-    Price: "5800",
-    Offer_Price: "",
-    Offer: "",
-    Size: "50ml",
-    Rating: "",
-    id: 3
-},
-{
-    Product: "SKINCARE",
-    Section: "MOISTURIZERS",
-    Sub_Section: "Moisturizers",
-    Image_1: "https://cdn17.nnnow.com/web-images/large/styles/O43RBR0M6UA/1636700674079/1.jpg",
-    Image_2: "https://cdn04.nnnow.com/web-images/large/styles/O43RBR0M6UA/1636700674068/2.jpg",
-    Image_3: "",
-    Name: "MARIO BADESCU",
-    Description: "Facial Spray With Aloe, Herbs & Rosewater",
-    Price: "475",
-    Offer_Price: "",
-    Offer: "",
-    Size: "59ML",
-    Rating: "",
-    id: 4
-},];
+let nav = document.querySelector("#navbar");
+nav.innerHTML = navbar();
+let foot = document.querySelector("#footer");
+foot.innerHTML = footer();
 
+
+document.querySelector("#panelImage1").addEventListener("mouseover", () => {
+    let bigImg = document.querySelector("#mainImage");
+    let Image_1 = document.querySelector("#panelImage1");
+    bigImg.src = Image_1.src;
+  
+})
+
+document.querySelector("#panelImage2").addEventListener("mouseover", () => {
+    let bigImg = document.querySelector("#mainImage");
+    let Image_2 = document.querySelector("#panelImage2");
+    bigImg.src = Image_2.src;
+   
+})
 
 let data = JSON.parse(localStorage.getItem("sephoraData")) || [];
 

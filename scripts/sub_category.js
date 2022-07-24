@@ -1,82 +1,10 @@
-import {display} from '../component/main.js';
+import { display } from '../component/main.js';
+import { navbar } from "../scripts/navbar.js"
 
-let data = [{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL1",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 2755
-},
-{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL1",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3055
-},
-{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL2",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 755
-},
-{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL2",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 1755
-},
-{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3700
-},
-{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 2999
-},
-{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3755
-},
-{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3755
-},
-{
-    image :"https://cdn17.nnnow.com/web-images/medium/styles/T1CA0US0QOH/1614353172645/1.jpg",
-    name:"FOREST ESSENTIAL",
-    description: "Soundarya Radiance Cream With 24 Karat Gold And SPF 25",
-    price: 3755
-},]
+let nav = document.querySelector("#navbar");
+nav.innerHTML = navbar();
 
-
-// function append_data(){
-//     product_div.innerHTML = ""
-//     data.forEach((el) => {
-//         let div = document.createElement("div")
-//         div.setAttribute ("id", "detailed_pro")
-//         let image = document.createElement("image");
-//         image.src= el.image
-//         let name = document.createElement("h4");
-//         name.innerText= el.name
-//         let description = document.createElement("p")
-//         description.innerText= el.description
-//         let price = document.createElement("h4")
-//         price.innerText= `Rs. ${el.price}`
-
-//        div.append(image,name,description,price)
-       
-//        product_div.append(div)
-
-//     });
-// }
-// // append_data(data);
+let data = JSON.parse(localStorage.getItem("sectionData"))
 
 let container = document.getElementById("product_div")
 display(data, container)
@@ -86,44 +14,44 @@ let c3 = document.getElementById("c3")
 let c4 = document.getElementById("c4")
 
 
-document.getElementById("c1").addEventListener("click",()=>{
+document.getElementById("c1").addEventListener("click", () => {
     console.log("working")
-    if(c1.checked==true){
-        data = data.filter((el)=>{
-            return el.name== "FOREST ESSENTIAL1";
+    if (c1.checked == true) {
+        data = data.filter((el) => {
+            return el.Name == "FOREST ESSENTIAL1";
         })
         console.log(data);
         append_data(data);
     }
 })
-document.getElementById("filtertagPrice").addEventListener("click",()=>{
+document.getElementById("filtertagPrice").addEventListener("click", () => {
     let value = document.getElementById("filtertagPrice").value;
     console.log(value);
-        if(value=="zero"){
-        let cdata = data.filter((el)=>{
-            return el.price > 0 && el.price <= 1000;
-      })
+    if (value == "zero") {
+        let cdata = data.filter((el) => {
+            return el.Price > 0 && el.Price <= 1000;
+        })
         // console.log(data, container);
         display(cdata, container)
 
     }
-    if(value=="thousand"){
-      let  cdata= data.filter((el) =>{
-            return el.price >1000 && el.price <=2000
+    if (value == "thousand") {
+        let cdata = data.filter((el) => {
+            return el.Price > 1000 && el.Price <= 2000
         })
         display(cdata, container)
 
     }
-    if(value=="two_thous"){
-        let cdata= data.filter((el) =>{
-            return el.price >=2000
+    if (value == "two_thous") {
+        let cdata = data.filter((el) => {
+            return el.Price >= 2000
         })
         display(cdata, container)
 
     }
-    if(value=="price"){
-        let cdata= data.filter((el) =>{
-            return el.price >=0
+    if (value == "Price") {
+        let cdata = data.filter((el) => {
+            return el.Price >= 0
         })
         console.log(data)
         display(cdata, container)
@@ -134,17 +62,34 @@ document.querySelector("#select").addEventListener("change", sorting)
 function sorting() {
     let toSort = document.getElementById("select").value;
     if (toSort == "LH") {
-        let sortedList = data.sort((a, b) => { 
-            return a.price - b.price 
-        } );
+        let sortedList = data.sort((a, b) => {
+            return a.Price - b.Price
+        });
         console.log(sortedList);
-       display(sortedList, container)
+        display(sortedList, container)
         console.log("high to low");
     }
     if (toSort == "HL") {
-        let sortedList= data.sort((a, b) => b.price - a.price);
-       display(sortedList, container)
+        let sortedList = data.sort((a, b) => b.Price - a.Price);
+        display(sortedList, container)
 
         console.log("low to high")
     }
-    }
+}
+
+let searchfun = document.getElementById('searchBar');
+searchfun.addEventListener("keydown", function (event) {
+    let input = document.getElementById('searchBar').value;
+    input = input.toLowerCase();
+    let temp = JSON.parse(localStorage.getItem("MainData"));
+    let filtered_list = temp.filter(function (elem) {
+        return (elem.Name).toLowerCase().includes(input);
+    });
+    localStorage.setItem("sectionData", JSON.stringify(filtered_list));
+    display(filtered_list);
+})
+
+import { footer } from "../scripts/navbar.js"
+
+let foot = document.querySelector("#footer");
+foot.innerHTML = footer();
