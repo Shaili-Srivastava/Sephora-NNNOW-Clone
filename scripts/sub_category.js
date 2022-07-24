@@ -1,6 +1,7 @@
 import { display } from '../component/main.js';
-import { navbar } from "../scripts/navbar.js"
-
+import { navbar,cartpopUp, loginpopup } from "../scripts/navbar.js"
+cartpopUp();
+loginpopup();
 let nav = document.querySelector("#navbar");
 nav.innerHTML = navbar();
 

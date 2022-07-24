@@ -1,6 +1,7 @@
 import { displyFrameWork, display } from "../component/main.js";
-import { navbar ,footer} from "../scripts/navbar.js"
-
+import { navbar ,footer, loginpopup,cartpopUp} from "../scripts/navbar.js"
+cartpopUp()
+loginpopup();
 let nav = document.querySelector("#navbar");
 nav.innerHTML = navbar();
 let foot = document.querySelector("#footer");

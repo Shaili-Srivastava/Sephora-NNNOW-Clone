@@ -1,30 +1,14 @@
-import { navbar, footer } from "./navbar.js";
+import { navbar, footer,cartpopUp, loginpopup } from "./navbar.js";
 document.querySelector("#navbar").innerHTML=navbar();
 document.querySelector("#footer").innerHTML=footer();
+cartpopUp();
+loginpopup();
+   
 
-
-let cartdata=JSON.parse(localStorage.getItem("sephoracart"))||[];
-let bagcount=document.querySelector("#bagcount");
-// if(cartdata.length==null){
-//     bagcount.innerText=null;
+// let userdatafilter= (data,emailphone)=>{
+//     data.filter(el=>{
+//         if(el.Email==emailphone || el.Mobile==emailphone){
+//             return el;
+//         }
+//     })
 // }
-// else{
-//     bagcount.innerText=cartdata.length;
-// }
-
-
-let mycart=document.querySelector("#mycart");
-mycart.addEventListener("click", function(){
-    if(bagcount.innerText=="0"){
-document.querySelector(".cartpopup1").classList.add("active");
-    }
-    else{
-        document.querySelector(".cartpopup2").classList.add("active");
-    }
-})
-document.querySelector(".close_button1").addEventListener("click", function () {
-    document.querySelector(".cartpopup1").classList.remove("active");
-});
-document.querySelector(".close_button2").addEventListener("click", function () {
-    document.querySelector(".cartpopup2").classList.remove("active");
-});
