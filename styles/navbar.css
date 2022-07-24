@@ -558,7 +558,7 @@ p {
 }
 
 .cartpopup2.active {
-    top: 38%;
+    top: 160%;
     opacity: 1;
     z-index: 1;
     transform: translate(-50%, -50%) scale(1);
