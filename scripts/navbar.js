@@ -35,7 +35,7 @@ let navbar = () => {
            
         </div>
         <div class="gap">|</div>
-        <div><a href="loyalty.html"><img src="https://th.bing.com/th/id/OIP.uUhwLqKAacvUjBMxfwunlwAAAA?pid=ImgDet&rs=1" alt="Error">
+        <div><a href="loyalty.html"><img src="https://i.ibb.co/LhBp1pB/trophy-pink.png" alt="Error">
             <p>Loyalty</p></a>
             
         </div>
