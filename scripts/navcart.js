@@ -1,20 +1,20 @@
 
-let cartdata=JSON.parse(localStorage.getItem("sephoracart"))||[];
-let bagcount=document.querySelector("#bagcount");
-if(cartdata.length==null){
-    bagcount.innerText=null;
+let cartdata = JSON.parse(localStorage.getItem("sephoracart")) || [];
+let bagcount = document.querySelector("#bagcount");
+if (cartdata.length == null) {
+    bagcount.innerText = null;
 }
-else{
+else {
     // bagcount.innerText=cartdata.length;
 }
 
 
-let mycart=document.querySelector("#mycart");
-mycart.addEventListener("click", function(){
-    if(bagcount==0){
-document.querySelector(".cartpopup1").classList.add("active");
+let mycart = document.querySelector("#mycart");
+mycart.addEventListener("click", function () {
+    if (bagcount == 0) {
+        document.querySelector(".cartpopup1").classList.add("active");
     }
-    else{
+    else {
         document.querySelector(".cartpopup2").classList.add("active");
     }
 })

@@ -51,7 +51,7 @@ let navbar = () => {
     <div>
         <div><a href="wishlist.html"><img src="https://i.ibb.co/Hqh4zqT/heart.png" alt="wishlist"></a></div>
         <div class="gap">|</div>
-        <div id="mycart">
+        <div id="mycart" >
             <img  src="https://i.ibb.co/J3Mr8YY/bag.png" alt="cart">
             <p id="bagcount">1</p>
             </div>
