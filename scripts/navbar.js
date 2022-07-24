@@ -35,7 +35,7 @@ let navbar= ()=>{
            
         </div>
         <div class="gap">|</div>
-        <div><a href="loyalty.html"><img src="https://th.bing.com/th/id/OIP.uUhwLqKAacvUjBMxfwunlwAAAA?pid=ImgDet&rs=1" alt="Error">
+        <div><a href="loyalty.html"><img src="https://i.ibb.co/LhBp1pB/trophy-pink.png" alt="Loyalty">
             <p>Loyalty</p></a>
             
         </div>
@@ -60,6 +60,7 @@ let navbar= ()=>{
             <img src="https://i.ibb.co/Z2L3KCx/user.png" alt="login"><p>Login</p></div>
     </div>
 </div>
+
 <div class="cartpopup1">
         <h1>MY BAG</h1>
         <div class="close_button1">&times;</div>
