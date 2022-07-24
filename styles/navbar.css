@@ -1,9 +1,9 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
-    font-family: ave;
+    /* font-family: ave; */
 }
 
 #navbar {
@@ -278,6 +278,7 @@ body{
     width: 100%;
     background-color: transparent;
 }
+
 .dropmenu a,
 p:hover {
     color: hotpink;

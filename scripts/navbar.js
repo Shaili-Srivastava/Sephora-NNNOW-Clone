@@ -215,7 +215,7 @@ let navbar = () => {
         </div></div>
         
     <div class="dropmenu">
-      <div class="menubar"><a href="haircare.html">HAIRCARE</a></div>
+      <div class="menubar"><a href="haircareCat.html">HAIRCARE</a></div>
       <div class="firstdrop">
       <div class="seconddrop">
            <p onclick="SHAMPOOCONDITIONER()">SHAMPOO & CONDITIONER</p>

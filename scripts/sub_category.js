@@ -81,7 +81,7 @@ let searchfun = document.getElementById('searchBar');
 searchfun.addEventListener("keydown", function (event) {
     let input = document.getElementById('searchBar').value;
     input = input.toLowerCase();
-    let temp = JSON.parse(localStorage.getItem("MainData"));
+    let temp = JSON.parse(localStorage.getItem("SephoraMainData"));
     let filtered_list = temp.filter(function (elem) {
         return (elem.Name).toLowerCase().includes(input);
     });
