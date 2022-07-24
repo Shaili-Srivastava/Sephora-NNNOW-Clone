@@ -521,7 +521,7 @@ p {
     top: 20px;
     right: 20px;
     width: 20px;
-    height: 20px;
+    height: 18px;
     background: grey;
     color: white;
     text-align: center;
@@ -559,7 +559,7 @@ p {
 }
 
 .cartpopup2.active {
-    top: 38%;
+    top: 160%;
     opacity: 1;
     z-index: 1;
     transform: translate(-50%, -50%) scale(1);
@@ -603,4 +603,271 @@ p {
 #button>button:hover {
     background-color: black;
     color: white;
+}
+.loginpopup1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -150%;
+    left: 85%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 20%;
+    height: auto;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.loginpopup1.active {
+    top: 52%;
+    opacity: 1;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+.close_button3 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 16px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    border-radius: 55%;
+}
+.loginpopup1>h2{
+    text-align: center;
+}
+.loginpopup1>div:nth-child(3){
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template: repeat(2,auto);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10%;
+}
+.loginpopup1>div:nth-child(3)>div:nth-child(1)>input{
+   width: 100%;
+   margin: auto;
+    padding: 10px;
+    border: 2px solid #eb0e2c;
+    margin-top: 2%;
+}
+.loginpopup1>div:nth-child(3)>div:nth-child(2){
+    text-align: center;
+padding: 10px;
+background-color: #ff74b9;
+color: white;
+font-size: bolder;
+cursor: pointer;
+}
+.loginpopup1>div:nth-child(3)>div:nth-child(3){
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.loginpopup1>div:nth-child(3)>div:nth-child(4){
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: #4285f4;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+.loginpopup1>div:nth-child(3)>div:nth-child(4)>img{
+    width: 10%;
+}
+.loginpopup1>div:nth-child(3)>div:nth-child(5){
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: #3b5998;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+}
+.loginpopup1>div:nth-child(3)>div:nth-child(5)>img{
+    width: 10%;
+}
+.loginpopup1>div:nth-child(3)>div:nth-child(6){
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    text-align: center;
+}
+.otppopup1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -150%;
+    left: 83%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 25%;
+    height: auto;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.otppopup1.active {
+    top: 62%;
+    opacity: 1;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+.close_button4 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 16px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    border-radius: 55%;
+}
+.otppopup1>h2{
+    text-align: center;
+}
+.otppopup1>div:nth-child(3){
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template:repeat(4,auto);
+    justify-content: center;
+    gap: 10px;
+}
+.otppopup1>div:nth-child(3)>div:nth-child(1)>img{
+    width: 100%;
+}
+#otpsent{
+    width: 100%;
+    text-align: center;
+}
+.otppopup1>div:nth-child(3)>div:nth-child(3){
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+.otppopup1>div:nth-child(3)>div:nth-child(3)>input{
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #eb0e2c;
+    border-radius: 10px;
+}
+.otppopup1>div:nth-child(3)>div:nth-child(4){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.otppopup1>div:nth-child(3)>div:nth-child(4)>p{
+    color: #ff74b9;
+    cursor: pointer;
+}
+.otppopup1>div:nth-child(3)>div:nth-child(4)>div{
+    display: flex;
+    gap: 4px;
+}
+.otppopup1>div:nth-child(3)>div:nth-child(4)>div>p:last-child{
+    color: #ff74b9;
+    cursor: pointer;
+}
+#submitotp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff74b9;
+    color: white;
+    font-weight: bolder;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.signuppopup1 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: -150%;
+    left: 85%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 20%;
+    height: auto;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+
+.signuppopup1.active {
+    top: 52%;
+    opacity: 1;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
+
+}
+.close_button5 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 16px;
+    background: grey;
+    color: white;
+    text-align: center;
+    line-height: 15px;
+    cursor: pointer;
+    border-radius: 55%;
 }

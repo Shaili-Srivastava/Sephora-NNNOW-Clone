@@ -9,183 +9,6 @@
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <style media="screen">
-        .slide-box {
-            width: 100%;
-            margin: auto;
-            margin-top: 20px;
-
-        }
-
-        .slide-box::before {
-            display: block;
-        }
-
-        .slide-box>a>img {
-            width: 100%;
-
-        }
-
-        hr {
-            width: 80%;
-            margin: auto;
-            color: grey;
-
-        }
-
-        #homebody1 {
-            width: 80%;
-            margin: auto;
-            margin-top: 4%;
-            justify-content: center;
-        }
-
-        #homebody1>a {
-            text-decoration: none;
-            color: white;
-            background-color: black;
-            width: 10%;
-            padding: 20px;
-
-        }
-
-        #homebody2 {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 40px;
-        }
-
-        #subhomebody2 {
-            width: 100%;
-            display: grid;
-            grid-template: auto/repeat(2, auto);
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        #homebody2left {
-            width: 50%;
-        }
-
-        #homebody3>div {
-            width: 80%;
-            margin: auto;
-            display: flex;
-            justify-content: space-around;
-            gap: 10px;
-        }
-
-        #homebody3>div>a>img {
-            width: 100%;
-        }
-
-        #homebody4 {
-            width: 80%;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        #homebody4>a>img {
-            width: 100%;
-        }
-
-        #homebody5 {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-        }
-
-        #homebody6 {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
-
-        }
-
-        #homebody6>div {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        #homebody6>div>a>img {
-            width: 100%;
-        }
-
-        #homebody7 {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        #homebody7>div {
-            width: 100%;
-            display: grid;
-            grid-template: repeat(2, auto)/repeat(3, auto);
-            justify-content: space-around;
-            gap: 15px;
-        }
-
-        #homebody7>div>a>img {
-            width: 100%;
-        }
-
-        #homebody8 {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        #homebody8>div {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            gap: 10px;
-            margin-top: 20px;
-            line-height: 30px;
-        }
-
-        #homebody8>div>div>a>img {
-            width: 100%;
-        }
-
-        #homebody8>div>div>h2 {
-            margin-top: 10px;
-        }
-
-        #homebody8>img {
-            width: 100%;
-        }
-
-        #homebody7>img {
-            width: 100%;
-        }
-
-        #homebody6>img {
-            width: 100%;
-        }
-
-        #homebody5>img {
-            width: 100%;
-        }
-
-        #homebody3>img {
-            width: 100%;
-        }
-
-        #homebody2>img {
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -351,6 +174,46 @@
 
     </div>
     <div id="footer"></div>
+
+    <div class="loginpopup1">
+        <h2>LOGIN</h2>
+        <div class="close_button3">&times;</div>
+        <div>
+            <div><label for="">Enter your Phone / Email</label>
+                <input id="emailphone" type="text" required min="10"></div>
+                <div id="loginstart">CONTINUE</div>
+            <div>
+                <hr> Or <hr>
+            </div>
+            <div><img src="https://static.nnnow.com/google-social-login.svg" alt="Continue with Google"><p>Continue with Google</p></div>
+            <div><img src="https://static.nnnow.com/facebook.png" alt="Continue with Facebook"><p>Continue with Facebook</p></div>
+            <div><p>By proceeding, you agree to Privacy Policy,Terms & Conditions.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="otppopup1">
+        <h2>ENTER OTP</h2>
+        <div class="close_button4">&times;</div>
+        <div>
+            <div><img src="https://www.newcastlesendiass.co.uk/sites/default/files/inline-images/text-messages-clipart.jpg" alt="otp jpeg"></div>
+            <div><p id="otpsent"></p></div>
+            <div>
+                <label for="">OTP</label>
+                <input id="otpvalue" type="password">
+            </div>
+            <div>
+                <p>Use Password</p>
+                <div>
+                    <p>Didn't Recieve?</p>
+                    <p>Resend</p>
+                </div>
+            </div>
+            <div id="submitotp">SUBMIT</div>
+        </div>
+        
+    </div>
 </body>
 
 </html>

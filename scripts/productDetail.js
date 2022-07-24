@@ -1,5 +1,7 @@
-import { navbar, footer } from "../scripts/navbar.js"
+import { navbar, footer, cartpopUp,loginpopup } from "../scripts/navbar.js"
 
+// cartpopUp();
+// loginpopup();
 let nav = document.querySelector("#navbar");
 nav.innerHTML = navbar();
 let foot = document.querySelector("#footer");

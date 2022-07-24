@@ -35,7 +35,7 @@ let navbar = () => {
            
         </div>
         <div class="gap">|</div>
-        <div><a href="loyalty.html"><img src="https://i.ibb.co/LhBp1pB/trophy-pink.png" alt="Error">
+        <div><a href="loyalty.html"><img src="https://i.ibb.co/LhBp1pB/trophy-pink.png" alt="Loyalty">
             <p>Loyalty</p></a>
             
         </div>
@@ -60,6 +60,7 @@ let navbar = () => {
             <img src="https://i.ibb.co/Z2L3KCx/user.png" alt="login"><p>Login</p></div>
     </div>
 </div>
+
 <div class="cartpopup1">
         <h1>MY BAG</h1>
         <div class="close_button1">&times;</div>
@@ -510,6 +511,49 @@ let cartpopUp = () => {
     });
 }
 
+let loginpopup= ()=>{
+// let sephorauserdata=JSON.parse(localStorage.getItem("sephorauserdata"))||[];
 
-export { navbar, footer, cartpopUp }
+let loginbtn=document.querySelector("#login");
+loginbtn.addEventListener("click", ()=>{
+    document.querySelector(".loginpopup1").classList.add("active");
+});
+document.querySelector(".close_button3").addEventListener("click", function () {
+    document.querySelector(".loginpopup1").classList.remove("active");
+});
+
+let emailphone=document.querySelector("#emailphone");
+let submitotp =document.querySelector("#submitotp");
+
+let loginstart=document.querySelector("#loginstart");
+loginstart.addEventListener("click", ()=>{
+  emailphone=emailphone.value;
+    if(emailphone.length<10){
+        alert("Enter valid credentials");
+    }
+   else{
+    document.querySelector(".loginpopup1").classList.remove("active");
+    let otpsent=document.querySelector("#otpsent");
+    otpsent.innerText=`We’ve sent an OTP to ${emailphone} via SMS. Please enter it below, and you’re done.`
+    document.querySelector(".otppopup1").classList.add("active");
+document.querySelector(".close_button4").addEventListener("click", function () {
+    document.querySelector(".otppopup1").classList.remove("active");
+});
+   }
+});
+submitotp.addEventListener("click", ()=>{
+    let otpvalue= document.querySelector("#otpvalue").value;
+    if(otpvalue=="0497"){
+        alert("Logged in Successfully");
+        window.location.href="index.html";
+    }
+    else{
+        alert("Invalid OTP entered");
+    }
+})
+
+}
+
+
+export { navbar, footer, cartpopUp, loginpopup }
 
