@@ -545,7 +545,7 @@ submitotp.addEventListener("click", ()=>{
     let otpvalue= document.querySelector("#otpvalue").value;
     if(otpvalue=="0497"){
         alert("Logged in Successfully");
-        window.location.href="index.html";
+        window.location.href="./Acount/acount.html";
     }
     else{
         alert("Invalid OTP entered");
