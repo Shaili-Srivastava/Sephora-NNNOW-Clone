@@ -511,47 +511,19 @@ let cartpopUp = () => {
     });
 }
 
-let loginpopup= ()=>{
-// let sephorauserdata=JSON.parse(localStorage.getItem("sephorauserdata"))||[];
+let loginpopup = () => {
+    // let sephorauserdata=JSON.parse(localStorage.getItem("sephorauserdata"))||[];
 
-let loginbtn=document.querySelector("#login");
-loginbtn.addEventListener("click", ()=>{
-    document.querySelector(".loginpopup1").classList.add("active");
-});
-document.querySelector(".close_button3").addEventListener("click", function () {
-    document.querySelector(".loginpopup1").classList.remove("active");
-});
+    let loginbtn = document.querySelector("#login");
+    loginbtn.addEventListener("click", () => {
+        document.querySelector(".loginpopup1").classList.add("active");
+    });
+    document.querySelector(".close_button3").addEventListener("click", function () {
+        document.querySelector(".loginpopup1").classList.remove("active");
+    });
 
-let emailphone=document.querySelector("#emailphone");
-let submitotp =document.querySelector("#submitotp");
-
-let loginstart=document.querySelector("#loginstart");
-loginstart.addEventListener("click", ()=>{
-  emailphone=emailphone.value;
-    if(emailphone.length<10){
-        alert("Enter valid credentials");
-    }
-   else{
-    document.querySelector(".loginpopup1").classList.remove("active");
-    let otpsent=document.querySelector("#otpsent");
-    otpsent.innerText=`We’ve sent an OTP to ${emailphone} via SMS. Please enter it below, and you’re done.`
-    document.querySelector(".otppopup1").classList.add("active");
-document.querySelector(".close_button4").addEventListener("click", function () {
-    document.querySelector(".otppopup1").classList.remove("active");
-});
-   }
-});
-submitotp.addEventListener("click", ()=>{
-    let otpvalue= document.querySelector("#otpvalue").value;
-    if(otpvalue=="0497"){
-        alert("Logged in Successfully");
-        window.location.href="./Acount/acount.html";
-    }
-    else{
-        alert("Invalid OTP entered");
-    }
-})
-
+    let emailphone = document.querySelector("#emailphone");
+    let submitotp = document.querySelector("#submitotp");
 }
 
 
