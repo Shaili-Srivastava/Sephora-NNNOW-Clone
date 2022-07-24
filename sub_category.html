@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Products</title>
     <link rel="stylesheet" href="./styles/navbar.css">
     <style>
-        body{
+        body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-        #main_div{
+
+        #main_div {
             /* border: 2px solid black; */
             height: auto;
             width: 80%;
@@ -20,40 +22,46 @@
             padding: 15px;
             /* text-align: center; */
         }
-        #select_div{
+
+        #select_div {
             display: flex;
             height: 30px;
             width: 100%;
-            justify-content:right;
-            align-items: center;  
+            justify-content: right;
+            align-items: center;
         }
-        #select{
-            padding: 5px; 
+
+        #select {
+            padding: 5px;
             margin: 5px;
-            width: 30%;     
+            width: 30%;
             /* border: 2px solid black;    */
-            
+
         }
-        #left_div{
+
+        #left_div {
             height: auto;
             width: 15%;
             padding: 10px;
         }
-        #right_div{
+
+        #right_div {
             height: auto;
             width: 80%;
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        #product_div{
+
+        #product_div {
             width: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             padding: 20px;
-            gap:20px;
+            gap: 20px;
             /* border: 2px solid black; */
         }
+
         /* #detailed_pro{
             border: 2px solid red;
             height: auto;
@@ -64,181 +72,199 @@
         #detailed_pro>img{
             width: 90%;
         } */
-        .filtertag{
-            padding: 5px; 
+        .filtertag {
+            padding: 5px;
             margin: 5px;
-            width: 90%; 
-            height: 35px;    
+            width: 90%;
+            height: 35px;
             /* border: 2px solid black; */
             /* background-color: black; */
             color: black;
             margin-bottom: 20px;
         }
-        .filtertag:hover{
+
+        .filtertag:hover {
             background-color: black;
             color: white;
         }
-        .filtertag>option{
+
+        .filtertag>option {
             background-color: white;
             color: black;
         }
+
         /* .check{
             color: pink;
             background-color: pink;
         } */
-        #c1{
+        #c1 {
             background-color: pink;
         }
-    /* -------------------product css ----------------------------- */
-    .card {
-    width: 85%;
-    /* margin: auto; */
-    /* background-color: yellow; */
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    /* background-color: yellow; */
-    /* line-height: 15px; */
-    /* border: 1px solid black; */
-}
 
-.card>img {
-    /* margin-bottom: -50px; */
-    width: 100%;
-    /* border: 1px solid red; */
-}
+        /* -------------------product css ----------------------------- */
+        .card {
+            width: 85%;
+            /* margin: auto; */
+            /* background-color: yellow; */
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            /* background-color: yellow; */
+            /* line-height: 15px; */
+            /* border: 1px solid black; */
+        }
 
-.hiddenDiv {
-    width: 93.5%;
-    margin: auto;
-    background-color: rgb(60, 218, 218);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-    padding: 20px 10px;
-    position: absolute;
-    visibility: hidden;
-    bottom: 180px;
-    left: 0px;
-    right: 0px;
-    height: 0px;
-    transition: .5s ease;
-}
+        .imgDIV {
+            width: 100%;
+            position: relative;
+        }
 
-.card:hover .hiddenDiv {
-    height: 60px;
-    visibility: visible;
-    transition: .5s ease;
+        .imgDIV>img {
+            width: 100%;
+        }
 
-}
+        .card>div>img {
+            width: 90%;
+        }
 
-.hiddenDiv p {
-    line-height: 10px;
-    color: white;
-}
+        .hiddenDiv {
+            width: 93.5%;
+            margin: auto;
+            background-color: rgb(60, 218, 218);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+            padding: 20px 10px;
+            position: absolute;
+            visibility: hidden;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            height: 0px;
+            transition: .5s ease;
+        }
 
-.hiddenDiv img {
-    width: 20%;
-    padding: 0px;
-}  
-input[type="checkbox"]:checked{
-   background-color: pink;
-   box-shadow:  0 0 0 3px hotpink;
-}
+        .card:hover .hiddenDiv {
+            height: 60px;
+            visibility: visible;
+            transition: .5s ease;
 
+        }
 
+        .hiddenDiv p {
+            line-height: 10px;
+            color: white;
+        }
+
+        .hiddenDiv img {
+            width: 20%;
+            padding: 0px;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: pink;
+            box-shadow: 0 0 0 3px hotpink;
+        }
     </style>
 </head>
+
 <body>
     <div id="navbar"></div>
-    <div id="main_div">  
-            <div id="left_div">
-               <div id="category">
-                <h4 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ">CATEGORY</h4>
-                <input  type="checkbox" name="opt" id="c1" value="Moisturizer" >
+    <div id="main_div">
+        <div id="left_div">
+            <div id="category">
+                <h4
+                    style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ">
+                    CATEGORY</h4>
+                <input type="checkbox" name="opt" id="c1" value="Moisturizer">
                 <label for="moisturizer">Moisturizer</label>
                 <br>
                 <input class="check" type="checkbox" name="opt" id="c2" value="Night Cream" onchange="filter()">
                 <label for="moisturizer">Night Cream</label>
                 <br>
                 <input class="check" type="checkbox" name="opt" id="c3" value="Face Mist" onchange="filter()">
-               <label for="moisturizer">Face Mist</label>
-               <br>
-               <input class="check" type="checkbox" name="opt" id="c4" value="BB Cream and CC Cream" onchange="filter()">
-               <label for="moisturizer">BB Cream and CC Cream</label>
-               <br>
-               <hr>
-               <input class="check" type="checkbox" name="" id="c5" value="New Arrivals">
-               <label for="New Arrivals">New Arrivals</label>
-               <hr>
+                <label for="moisturizer">Face Mist</label>
+                <br>
+                <input class="check" type="checkbox" name="opt" id="c4" value="BB Cream and CC Cream"
+                    onchange="filter()">
+                <label for="moisturizer">BB Cream and CC Cream</label>
+                <br>
+                <hr>
+                <input class="check" type="checkbox" name="" id="c5" value="New Arrivals">
+                <label for="New Arrivals">Offers</label>
+                <hr>
 
-               <div id="filter">
-                <h4 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ">FILTER BY</h4>
-                 <select name="" class="filtertag">
-                    <option value="brand">Brand</option>
-                    <option value="huda beauty">Huda Beauty</option>
-                    <option value="sephora Collection">Sephora Collection</option>
-                    <option value="clinique">Clinique</option>
-                    <option value="Forest Essentials">FOREST ESSENTIALS</option>
-                    <option value="Clarins">Clarins</option>
-                 </select>
+                <div id="filter">
+                    <h4
+                        style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ">
+                        FILTER BY</h4>
+                    <select name="" id="filterBrand" class="filtertag">
+                        <option value="">Brand</option>
+                        <option value="huda beauty">Huda Beauty</option>
+                        <option value="sephora Collection">Sephora Collection</option>
+                        <option value="clinique">Clinique</option>
+                        <option value="Forest Essentials">FOREST ESSENTIALS</option>
+                        <option value="Clarins">Clarins</option>
+                    </select>
 
-                 <select name="" id="filtertagSize" class="filtertag">
-                    <option value="size">Size</option>
-                    <option value="10 Gm">10 Gm</option>
-                   <option value="50 gm">50 Gm</option>
-                    <option value="30 ml">30 ml</option>
-                    <option value="35 ml">35 ml</option>
-                    <option value="40 ml">40 ml</option>
-                    <option value="115 ml">115 ml</option>
-                 </select>
+                    <select name="" id="filtertagSize" class="filtertag">
+                        <option value="size">Size</option>
+                        <option value="10 Gm">10 Gm</option>
+                        <option value="50 gm">50 Gm</option>
+                        <option value="30 ml">30 ml</option>
+                        <option value="35 ml">35 ml</option>
+                        <option value="40 ml">40 ml</option>
+                        <option value="115 ml">115 ml</option>
+                    </select>
 
-                 <select name="" id="filtertagPrice" class="filtertag">
-                    <option value="price">Price</option>
-                    <option value="zero">0-1000</option>
-                    <option value="thousand">1000-2000</option>
-                    <option value="two_thous">2000 and Above</option>
-                 </select>
+                    <select name="" id="filtertagPrice" class="filtertag">
+                        <option value="price">Price</option>
+                        <option value="zero">0-1000</option>
+                        <option value="thousand">1000-2000</option>
+                        <option value="two_thous">2000 and Above</option>
+                    </select>
 
-                 <select name="" class="filtertag">
-                    <option value="rating">Rating</option>
-                    <option value="0-3">0-3</option>
-                    <option value="3-5">3-5</option>
-                 </select>
+                    <select name="" class="filtertag">
+                        <option value="rating">Rating</option>
+                        <option value="0-3">0-3</option>
+                        <option value="3-5">3-5</option>
+                    </select>
 
-                 <select name="" class="filtertag">
-                    <option value="gender">Gender</option>
-                    <option value="men">Men</option>
-                    <option value="women">Women</option>
-                    <option value="unisex">Unisex Adults</option>
-                 </select>
-                 <select name="" class="filtertag">
-                    <option value="color">Color</option>
-                    <option value="beige">Beige</option>
-                    <option value="pink">Pink</option>
-                    <option value="brown">Brown</option>
-                    <option value="No Color">No Color</option>
-                 </select>
-               </div>
-               </div>
-
-            </div>
-            <div id="right_div">
-                <div id="select_div">
-                    <select name="" id="select">
-                        <option value="#">Popularity</option>
-                        <option value="HL">High to Low</option>
-                        <option value="LH">Low to High</option>
+                    <select name="" class="filtertag">
+                        <option value="gender">Gender</option>
+                        <option value="men">Men</option>
+                        <option value="women">Women</option>
+                        <option value="unisex">Unisex Adults</option>
+                    </select>
+                    <select name="" class="filtertag">
+                        <option value="color">Color</option>
+                        <option value="beige">Beige</option>
+                        <option value="pink">Pink</option>
+                        <option value="brown">Brown</option>
+                        <option value="No Color">No Color</option>
                     </select>
                 </div>
-                <div id="product_div">
-                </div>
             </div>
+
+        </div>
+        <div id="right_div">
+            <div id="select_div">
+                <select name="" id="select">
+                    <option value="#">Popularity</option>
+                    <option value="HL">High to Low</option>
+                    <option value="LH">Low to High</option>
+                </select>
+            </div>
+            <div id="product_div">
+            </div>
+        </div>
     </div>
     <div id="footer"></div>
 </body>
+
 </html>
 
 <script src="./scripts/sub_category.js" type="module"></script>
 <script src="./scripts/navbarFunctions.js"></script>
+<script src="./scripts/navcart.js"></script>

@@ -12,14 +12,14 @@ document.querySelector("#panelImage1").addEventListener("mouseover", () => {
     let bigImg = document.querySelector("#mainImage");
     let Image_1 = document.querySelector("#panelImage1");
     bigImg.src = Image_1.src;
-  
+
 })
 
 document.querySelector("#panelImage2").addEventListener("mouseover", () => {
     let bigImg = document.querySelector("#mainImage");
     let Image_2 = document.querySelector("#panelImage2");
     bigImg.src = Image_2.src;
-   
+
 })
 
 let data = JSON.parse(localStorage.getItem("sephoraData")) || [];
@@ -50,10 +50,10 @@ let displayProduct = (data) => {
 
     if (data.Offer_Price == "") {
         prodOgPrice.innerText = ``;
-        prodOfferPrice.innerText = `Rs .${data.Price}`;
+        prodOfferPrice.innerText = `Rs. ${data.Price}`;
     } else {
         prodOgPrice.innerText = `Rs .${data.Price}`;
-        prodOfferPrice.innerText = `Rs .${data.Offer_Price}`;
+        prodOfferPrice.innerText = `Rs. ${data.Offer_Price}`;
     }
 
 

@@ -58,6 +58,32 @@ document.getElementById("filtertagPrice").addEventListener("click", () => {
         display(cdata, container)
     }
 })
+document.querySelector("#filterBrand").addEventListener("change", () => {
+    let value = document.querySelector("#filterBrand").value;
+    if (value == "huda beauty") {
+        let filterData = data.filter((el) => {
+            return el.Name == "HUDA BEAUTY";
+        })
+        display(filterData, container);
+    } else if (value == "sephora Collection") {
+        let filterData = data.filter((el) => {
+            return el.Name == "SEPHORA COLLECTION";
+        })
+        display(filterData, container);
+    } else if (value == "clinique") {
+        let filterData = data.filter((el) => {
+            return el.Name == "CLINIQUE";
+        })
+        display(filterData, container);
+    }
+})
+let c5 = document.querySelector("#c5");
+if (c5.checked == true) {
+    let filter = data.filter((el) => {
+        return el.Offer_Price != "";
+    })
+    display(filter, container);
+}
 
 document.querySelector("#select").addEventListener("change", sorting)
 function sorting() {
@@ -78,17 +104,17 @@ function sorting() {
     }
 }
 
-let searchfun = document.getElementById('searchBar');
-searchfun.addEventListener("keydown", function (event) {
+let search = () => {
     let input = document.getElementById('searchBar').value;
     input = input.toLowerCase();
-    let temp = JSON.parse(localStorage.getItem("MainData"));
+    let temp = JSON.parse(localStorage.getItem("SephoraMainData"));
     let filtered_list = temp.filter(function (elem) {
         return (elem.Name).toLowerCase().includes(input);
     });
     localStorage.setItem("sectionData", JSON.stringify(filtered_list));
     display(filtered_list);
-})
+}
+
 
 import { footer } from "../scripts/navbar.js"
 

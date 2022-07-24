@@ -51,7 +51,7 @@ let navbar = () => {
     <div>
         <div><a href="wishlist.html"><img src="https://i.ibb.co/Hqh4zqT/heart.png" alt="wishlist"></a></div>
         <div class="gap">|</div>
-        <div id="mycart">
+        <div id="mycart" >
             <img  src="https://i.ibb.co/J3Mr8YY/bag.png" alt="cart">
             <p id="bagcount">1</p>
             </div>
@@ -216,7 +216,7 @@ let navbar = () => {
         </div></div>
         
     <div class="dropmenu">
-      <div class="menubar"><a href="haircare.html">HAIRCARE</a></div>
+      <div class="menubar"><a href="haircareCat.html">HAIRCARE</a></div>
       <div class="firstdrop">
       <div class="seconddrop">
            <p onclick="SHAMPOOCONDITIONER()">SHAMPOO & CONDITIONER</p>
